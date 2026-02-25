@@ -1,0 +1,130 @@
+<svg width="864pt" height="822pt"
+ viewBox="0.00 0.00 864.00 822.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 817.75)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-817.75 859.76,-817.75 859.76,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_apps</title>
+<polygon fill="none" stroke="#3366cc" points="50.01,-24.29 50.01,-238.36 466.01,-238.36 466.01,-24.29 50.01,-24.29"/>
+<text xml:space="preserve" text-anchor="middle" x="258.01" y="-221.06" font-family="Times,serif" font-size="14.00" fill="#3366cc">Applications</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_browser_ai</title>
+<polygon fill="none" stroke="#cc3333" points="121.01,-324.89 121.01,-789.46 281.01,-789.46 281.01,-324.89 121.01,-324.89"/>
+<text xml:space="preserve" text-anchor="middle" x="201.01" y="-772.16" font-family="Times,serif" font-size="14.00" fill="#cc3333">Core Components</text>
+</g>
+<!-- Ad&#45;Use App -->
+<g id="node1" class="node">
+<title>Ad&#45;Use App</title>
+<polygon fill="lightblue" stroke="black" stroke-width="2" points="333.76,-121.29 220.26,-121.29 220.26,-85.29 333.76,-85.29 333.76,-121.29"/>
+<text xml:space="preserve" text-anchor="middle" x="277.01" y="-100.49" font-family="Times,serif" font-size="14.00">Ad&#45;Use:</text>
+<text xml:space="preserve" text-anchor="middle" x="277.01" y="-89.99" font-family="Times,serif" font-size="14.00">Ad Generation</text>
+</g>
+<!-- Browser&#45;Use Agent -->
+<g id="node2" class="node">
+<title>Browser&#45;Use Agent</title>
+<polygon fill="lightblue" stroke="black" stroke-width="2" points="272.76,-672.29 129.26,-672.29 129.26,-636.29 272.76,-636.29 272.76,-672.29"/>
+<text xml:space="preserve" text-anchor="middle" x="201.01" y="-646.24" font-family="Times,serif" font-size="14.00">Browser&#45;Use Agent</text>
+</g>
+<!-- Ad&#45;Use App&#45;&gt;Browser&#45;Use Agent -->
+<g id="edge1" class="edge">
+<title>Ad&#45;Use App&#45;&gt;Browser&#45;Use Agent</title>
+<path fill="none" stroke="black" d="M301.02,-122.06C349.38,-158.87 453.04,-243.36 442.01,-283.54 401.89,-429.73 279.84,-570.8 226.46,-627.35"/>
+<polygon fill="black" stroke="black" points="224.21,-624.63 219.85,-634.28 229.28,-629.46 224.21,-624.63"/>
+<text xml:space="preserve" text-anchor="middle" x="418.15" y="-396.24" font-family="Times,serif" font-size="14.00">Uses</text>
+</g>
+<!-- Websites/Platforms -->
+<g id="node5" class="node">
+<title>Websites/Platforms</title>
+<polygon fill="lightblue" stroke="black" stroke-width="2" points="855.76,-422.29 562.26,-422.29 562.26,-386.29 855.76,-386.29 855.76,-422.29"/>
+<text xml:space="preserve" text-anchor="middle" x="709.01" y="-401.49" font-family="Times,serif" font-size="14.00">Websites/Platforms</text>
+<text xml:space="preserve" text-anchor="middle" x="709.01" y="-390.99" font-family="Times,serif" font-size="14.00">(Landing Pages, WhatsApp, News Sites)</text>
+</g>
+<!-- Browser&#45;Use Agent&#45;&gt;Websites/Platforms -->
+<g id="edge4" class="edge">
+<title>Browser&#45;Use Agent&#45;&gt;Websites/Platforms</title>
+<path fill="none" stroke="black" d="M266.18,-635.35C333.8,-615.44 441.55,-580.02 528.01,-534.54 585.1,-504.51 644.77,-458.63 679.33,-430.37"/>
+<polygon fill="black" stroke="black" points="681.32,-433.27 686.81,-424.21 676.86,-427.87 681.32,-433.27"/>
+<text xml:space="preserve" text-anchor="middle" x="596.3" y="-521.24" font-family="Times,serif" font-size="14.00">Interacts with</text>
+</g>
+<!-- Google AI Models -->
+<g id="node6" class="node">
+<title>Google AI Models</title>
+<polygon fill="lightblue" stroke="black" stroke-width="2" points="265.01,-422.29 129.01,-422.29 129.01,-386.29 265.01,-386.29 265.01,-422.29"/>
+<text xml:space="preserve" text-anchor="middle" x="197.01" y="-401.49" font-family="Times,serif" font-size="14.00">Google AI Models</text>
+<text xml:space="preserve" text-anchor="middle" x="197.01" y="-390.99" font-family="Times,serif" font-size="14.00">(Gemini, Veo3)</text>
+</g>
+<!-- Browser&#45;Use Agent&#45;&gt;Google AI Models -->
+<g id="edge5" class="edge">
+<title>Browser&#45;Use Agent&#45;&gt;Google AI Models</title>
+<path fill="none" stroke="black" d="M200.72,-635.46C200.04,-593.09 198.31,-486.11 197.48,-434.3"/>
+<polygon fill="black" stroke="black" points="200.98,-434.42 197.32,-424.48 193.98,-434.53 200.98,-434.42"/>
+<text xml:space="preserve" text-anchor="middle" x="236.51" y="-521.24" font-family="Times,serif" font-size="14.00">Integrates</text>
+</g>
+<!-- Msg&#45;Use App -->
+<g id="node3" class="node">
+<title>Msg&#45;Use App</title>
+<polygon fill="lightblue" stroke="black" stroke-width="2" points="201.76,-121.29 58.26,-121.29 58.26,-85.29 201.76,-85.29 201.76,-121.29"/>
+<text xml:space="preserve" text-anchor="middle" x="130.01" y="-100.49" font-family="Times,serif" font-size="14.00">Msg&#45;Use:</text>
+<text xml:space="preserve" text-anchor="middle" x="130.01" y="-89.99" font-family="Times,serif" font-size="14.00">Message Scheduler</text>
+</g>
+<!-- Msg&#45;Use App&#45;&gt;Browser&#45;Use Agent -->
+<g id="edge2" class="edge">
+<title>Msg&#45;Use App&#45;&gt;Browser&#45;Use Agent</title>
+<path fill="none" stroke="black" d="M156.03,-122.13C193.37,-149.5 260.58,-205.82 287.01,-273.04 329.57,-381.26 312.99,-423.64 278.01,-534.54 266.97,-569.55 242.58,-604.15 224.2,-626.88"/>
+<polygon fill="black" stroke="black" points="221.64,-624.48 217.95,-634.41 227.03,-628.95 221.64,-624.48"/>
+<text xml:space="preserve" text-anchor="middle" x="327.36" y="-396.24" font-family="Times,serif" font-size="14.00">Uses</text>
+</g>
+<!-- News&#45;Use App -->
+<g id="node4" class="node">
+<title>News&#45;Use App</title>
+<polygon fill="lightblue" stroke="black" stroke-width="2" points="458.01,-121.29 352.01,-121.29 352.01,-85.29 458.01,-85.29 458.01,-121.29"/>
+<text xml:space="preserve" text-anchor="middle" x="405.01" y="-100.49" font-family="Times,serif" font-size="14.00">News&#45;Use:</text>
+<text xml:space="preserve" text-anchor="middle" x="405.01" y="-89.99" font-family="Times,serif" font-size="14.00">News Monitor</text>
+</g>
+<!-- News&#45;Use App&#45;&gt;Browser&#45;Use Agent -->
+<g id="edge3" class="edge">
+<title>News&#45;Use App&#45;&gt;Browser&#45;Use Agent</title>
+<path fill="none" stroke="black" d="M412.3,-122.12C424.29,-152.48 447.64,-216.42 456.01,-273.04 465.79,-339.19 466.71,-362.38 437.01,-422.29 391.01,-515.09 292.41,-591.95 238.35,-629.15"/>
+<polygon fill="black" stroke="black" points="236.68,-626.06 230.37,-634.57 240.61,-631.85 236.68,-626.06"/>
+<text xml:space="preserve" text-anchor="middle" x="470.14" y="-396.24" font-family="Times,serif" font-size="14.00">Uses</text>
+</g>
+<!-- Google AI Models&#45;&gt;Ad&#45;Use App -->
+<g id="edge6" class="edge">
+<title>Google AI Models&#45;&gt;Ad&#45;Use App</title>
+<path fill="none" stroke="black" d="M191.44,-385.29C184.44,-359.88 174.48,-312.21 184.51,-273.04 198.41,-218.78 233.77,-163.21 256.53,-131.32"/>
+<polygon fill="black" stroke="black" points="259.21,-133.59 262.26,-123.44 253.55,-129.47 259.21,-133.59"/>
+<text xml:space="preserve" text-anchor="middle" x="248.26" y="-270.24" font-family="Times,serif" font-size="14.00">Generates Content</text>
+</g>
+<!-- Google AI Models&#45;&gt;Msg&#45;Use App -->
+<g id="edge7" class="edge">
+<title>Google AI Models&#45;&gt;Msg&#45;Use App</title>
+<path fill="none" stroke="black" d="M142.56,-385.45C97.62,-367.51 36.8,-335.02 8.51,-283.54 -23.42,-225.44 46.3,-162.32 92.77,-128.67"/>
+<polygon fill="black" stroke="black" points="94.62,-131.65 100.77,-123.02 90.58,-125.94 94.62,-131.65"/>
+<text xml:space="preserve" text-anchor="middle" x="72.26" y="-270.24" font-family="Times,serif" font-size="14.00">Composes Messages</text>
+</g>
+<!-- Google AI Models&#45;&gt;News&#45;Use App -->
+<g id="edge8" class="edge">
+<title>Google AI Models&#45;&gt;News&#45;Use App</title>
+<path fill="none" stroke="black" d="M217.56,-385.31C242.12,-363.11 283.46,-323.37 312.01,-283.54 347.55,-233.96 377.74,-168.97 393.44,-132.42"/>
+<polygon fill="black" stroke="black" points="396.57,-134.01 397.24,-123.43 390.12,-131.28 396.57,-134.01"/>
+<text xml:space="preserve" text-anchor="middle" x="378.23" y="-270.24" font-family="Times,serif" font-size="14.00">Analyzes Content</text>
+</g>
+</g>
+</svg>

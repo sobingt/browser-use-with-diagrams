@@ -1,0 +1,97 @@
+<svg width="457pt" height="438pt"
+ viewBox="0.00 0.00 457.00 438.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 433.5)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-433.5 452.91,-433.5 452.91,4 -4,4"/>
+<!-- Setup -->
+<g id="node1" class="node">
+<title>Setup</title>
+<polygon fill="lightblue" stroke="black" points="283.25,-420 139.75,-420 139.75,-384 283.25,-384 283.25,-420"/>
+<text xml:space="preserve" text-anchor="middle" x="211.5" y="-399.2" font-family="Times,serif" font-size="14.00">Setup Environment</text>
+<text xml:space="preserve" text-anchor="middle" x="211.5" y="-388.7" font-family="Times,serif" font-size="14.00">(setup.sh)</text>
+</g>
+<!-- CodeQuality -->
+<g id="node2" class="node">
+<title>CodeQuality</title>
+<polygon fill="lightblue" stroke="black" points="290.75,-295 132.25,-295 132.25,-259 290.75,-259 290.75,-295"/>
+<text xml:space="preserve" text-anchor="middle" x="211.5" y="-274.2" font-family="Times,serif" font-size="14.00">Code Quality Checks</text>
+<text xml:space="preserve" text-anchor="middle" x="211.5" y="-263.7" font-family="Times,serif" font-size="14.00">(lint.sh)</text>
+</g>
+<!-- Setup&#45;&gt;CodeQuality -->
+<g id="edge1" class="edge">
+<title>Setup&#45;&gt;CodeQuality</title>
+<path fill="none" stroke="black" d="M211.5,-383.64C211.5,-363.68 211.5,-330.6 211.5,-306.77"/>
+<polygon fill="black" stroke="black" points="215,-306.79 211.5,-296.79 208,-306.79 215,-306.79"/>
+<text xml:space="preserve" text-anchor="middle" x="260.25" y="-331.95" font-family="Times,serif" font-size="14.00">Initial setup</text>
+</g>
+<!-- Testing -->
+<g id="node3" class="node">
+<title>Testing</title>
+<polygon fill="lightblue" stroke="black" points="102.25,-170 18.75,-170 18.75,-134 102.25,-134 102.25,-170"/>
+<text xml:space="preserve" text-anchor="middle" x="60.5" y="-149.2" font-family="Times,serif" font-size="14.00">Run Tests</text>
+<text xml:space="preserve" text-anchor="middle" x="60.5" y="-138.7" font-family="Times,serif" font-size="14.00">(test.sh)</text>
+</g>
+<!-- CodeQuality&#45;&gt;Testing -->
+<g id="edge2" class="edge">
+<title>CodeQuality&#45;&gt;Testing</title>
+<path fill="none" stroke="black" d="M139.79,-258.62C118.01,-250.21 95.72,-237.96 80,-220.25 70.61,-209.67 65.73,-194.81 63.19,-181.75"/>
+<polygon fill="black" stroke="black" points="66.66,-181.29 61.69,-171.93 59.74,-182.35 66.66,-181.29"/>
+<text xml:space="preserve" text-anchor="middle" x="143.75" y="-206.95" font-family="Times,serif" font-size="14.00">After checks pass</text>
+</g>
+<!-- LintQuickMode -->
+<g id="node4" class="node">
+<title>LintQuickMode</title>
+<polygon fill="lightblue" stroke="black" points="275.75,-170 147.25,-170 147.25,-134 275.75,-134 275.75,-170"/>
+<text xml:space="preserve" text-anchor="middle" x="211.5" y="-143.95" font-family="Times,serif" font-size="14.00">lint.sh &#45;&#45;quick</text>
+</g>
+<!-- CodeQuality&#45;&gt;LintQuickMode -->
+<g id="edge3" class="edge">
+<title>CodeQuality&#45;&gt;LintQuickMode</title>
+<path fill="none" stroke="black" d="M211.5,-258.64C211.5,-238.68 211.5,-205.6 211.5,-181.77"/>
+<polygon fill="black" stroke="black" points="215,-181.79 211.5,-171.79 208,-181.79 215,-181.79"/>
+<text xml:space="preserve" text-anchor="middle" x="267.75" y="-206.95" font-family="Times,serif" font-size="14.00">Faster feedback</text>
+</g>
+<!-- LintStagedMode -->
+<g id="node5" class="node">
+<title>LintStagedMode</title>
+<polygon fill="lightblue" stroke="black" points="429.5,-170 293.5,-170 293.5,-134 429.5,-134 429.5,-170"/>
+<text xml:space="preserve" text-anchor="middle" x="361.5" y="-143.95" font-family="Times,serif" font-size="14.00">lint.sh &#45;&#45;staged</text>
+</g>
+<!-- CodeQuality&#45;&gt;LintStagedMode -->
+<g id="edge4" class="edge">
+<title>CodeQuality&#45;&gt;LintStagedMode</title>
+<path fill="none" stroke="black" d="M266.87,-258.53C288.13,-249.69 311.38,-237.18 328.5,-220.25 339.48,-209.39 347.38,-194.14 352.69,-180.9"/>
+<polygon fill="black" stroke="black" points="355.86,-182.41 356.02,-171.82 349.29,-180 355.86,-182.41"/>
+<text xml:space="preserve" text-anchor="middle" x="392.66" y="-206.95" font-family="Times,serif" font-size="14.00">Pre&#45;commit hook</text>
+</g>
+<!-- CI_CD -->
+<g id="node6" class="node">
+<title>CI_CD</title>
+<polygon fill="lightblue" stroke="black" points="121,-45 0,-45 0,-9 121,-9 121,-45"/>
+<text xml:space="preserve" text-anchor="middle" x="60.5" y="-18.95" font-family="Times,serif" font-size="14.00">CI/CD Pipeline</text>
+</g>
+<!-- Testing&#45;&gt;CI_CD -->
+<g id="edge5" class="edge">
+<title>Testing&#45;&gt;CI_CD</title>
+<path fill="none" stroke="black" d="M60.5,-133.64C60.5,-113.68 60.5,-80.6 60.5,-56.77"/>
+<polygon fill="black" stroke="black" points="64,-56.79 60.5,-46.79 57,-56.79 64,-56.79"/>
+<text xml:space="preserve" text-anchor="middle" x="109.25" y="-81.95" font-family="Times,serif" font-size="14.00">On merge/push</text>
+</g>
+</g>
+</svg>

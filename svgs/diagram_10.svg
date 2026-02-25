@@ -1,0 +1,120 @@
+<svg width="476pt" height="476pt"
+ viewBox="0.00 0.00 476.00 476.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 472)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-472 472,-472 472,4 -4,4"/>
+<!-- Agent/Tools -->
+<g id="node1" class="node">
+<title>Agent/Tools</title>
+<polygon fill="lightblue" stroke="black" points="272.97,-468 106.97,-468 106.97,-432 272.97,-432 272.97,-468"/>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-447.2" font-family="Times,serif" font-size="14.00">Agent / Tools</text>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-436.7" font-family="Times,serif" font-size="14.00">(High&#45;Level Intents)</text>
+</g>
+<!-- High&#45;Level Browser Events -->
+<g id="node2" class="node">
+<title>High&#45;Level Browser Events</title>
+<polygon fill="lightblue" stroke="black" points="366.72,-396 13.22,-396 13.22,-360 366.72,-360 366.72,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-375.2" font-family="Times,serif" font-size="14.00">High&#45;Level Browser Actions</text>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-364.7" font-family="Times,serif" font-size="14.00">(e.g., NavigateToUrlEvent, ClickElementEvent)</text>
+</g>
+<!-- Agent/Tools&#45;&gt;High&#45;Level Browser Events -->
+<g id="edge1" class="edge">
+<title>Agent/Tools&#45;&gt;High&#45;Level Browser Events</title>
+<path fill="none" stroke="black" d="M189.97,-431.7C189.97,-424.41 189.97,-415.73 189.97,-407.54"/>
+<polygon fill="black" stroke="black" points="193.47,-407.62 189.97,-397.62 186.47,-407.62 193.47,-407.62"/>
+</g>
+<!-- BaseEvent System -->
+<g id="node3" class="node">
+<title>BaseEvent System</title>
+<polygon fill="lightblue" stroke="black" points="257.97,-324 121.97,-324 121.97,-288 257.97,-288 257.97,-324"/>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-303.2" font-family="Times,serif" font-size="14.00">BaseEvent System</text>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-292.7" font-family="Times,serif" font-size="14.00">(EventBus)</text>
+</g>
+<!-- High&#45;Level Browser Events&#45;&gt;BaseEvent System -->
+<g id="edge2" class="edge">
+<title>High&#45;Level Browser Events&#45;&gt;BaseEvent System</title>
+<path fill="none" stroke="black" d="M189.97,-359.7C189.97,-352.41 189.97,-343.73 189.97,-335.54"/>
+<polygon fill="black" stroke="black" points="193.47,-335.62 189.97,-325.62 186.47,-335.62 193.47,-335.62"/>
+</g>
+<!-- BrowserSession -->
+<g id="node4" class="node">
+<title>BrowserSession</title>
+<polygon fill="lightblue" stroke="black" points="261.72,-180 118.22,-180 118.22,-144 261.72,-144 261.72,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-159.2" font-family="Times,serif" font-size="14.00">BrowserSession</text>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-148.7" font-family="Times,serif" font-size="14.00">(Core Controller)</text>
+</g>
+<!-- BaseEvent System&#45;&gt;BrowserSession -->
+<g id="edge3" class="edge">
+<title>BaseEvent System&#45;&gt;BrowserSession</title>
+<path fill="none" stroke="black" d="M121.52,-295.22C95.61,-287.82 68.62,-274.82 52.97,-252 43.93,-238.8 43.93,-229.2 52.97,-216 65.74,-197.37 86.06,-185.29 107.19,-177.46"/>
+<polygon fill="black" stroke="black" points="108.14,-180.83 116.5,-174.32 105.9,-174.2 108.14,-180.83"/>
+</g>
+<!-- Watchdogs -->
+<g id="node7" class="node">
+<title>Watchdogs</title>
+<polygon fill="lightblue" stroke="black" points="317.97,-252 61.97,-252 61.97,-216 317.97,-216 317.97,-252"/>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-231.2" font-family="Times,serif" font-size="14.00">Watchdogs</text>
+<text xml:space="preserve" text-anchor="middle" x="189.97" y="-220.7" font-family="Times,serif" font-size="14.00">(e.g., DOM, Security, Downloads)</text>
+</g>
+<!-- BaseEvent System&#45;&gt;Watchdogs -->
+<g id="edge7" class="edge">
+<title>BaseEvent System&#45;&gt;Watchdogs</title>
+<path fill="none" stroke="black" d="M189.97,-287.7C189.97,-280.41 189.97,-271.73 189.97,-263.54"/>
+<polygon fill="black" stroke="black" points="193.47,-263.62 189.97,-253.62 186.47,-263.62 193.47,-263.62"/>
+</g>
+<!-- CDP / Browser Operations -->
+<g id="node5" class="node">
+<title>CDP / Browser Operations</title>
+<polygon fill="lightblue" stroke="black" points="316.22,-108 67.72,-108 67.72,-72 316.22,-72 316.22,-108"/>
+<text xml:space="preserve" text-anchor="middle" x="191.97" y="-87.2" font-family="Times,serif" font-size="14.00">CDP Client / Browser Operations</text>
+<text xml:space="preserve" text-anchor="middle" x="191.97" y="-76.7" font-family="Times,serif" font-size="14.00">(Low&#45;Level Interaction)</text>
+</g>
+<!-- BrowserSession&#45;&gt;CDP / Browser Operations -->
+<g id="edge4" class="edge">
+<title>BrowserSession&#45;&gt;CDP / Browser Operations</title>
+<path fill="none" stroke="black" d="M190.47,-143.7C190.68,-136.41 190.92,-127.73 191.16,-119.54"/>
+<polygon fill="black" stroke="black" points="194.66,-119.71 191.44,-109.62 187.66,-119.51 194.66,-119.71"/>
+</g>
+<!-- Browser Lifecycle Events -->
+<g id="node6" class="node">
+<title>Browser Lifecycle Events</title>
+<polygon fill="lightblue" stroke="black" points="454.47,-36 93.47,-36 93.47,0 454.47,0 454.47,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="273.97" y="-15.2" font-family="Times,serif" font-size="14.00">Browser Lifecycle Events</text>
+<text xml:space="preserve" text-anchor="middle" x="273.97" y="-4.7" font-family="Times,serif" font-size="14.00">(e.g., BrowserConnectedEvent, TabCreatedEvent)</text>
+</g>
+<!-- CDP / Browser Operations&#45;&gt;Browser Lifecycle Events -->
+<g id="edge5" class="edge">
+<title>CDP / Browser Operations&#45;&gt;Browser Lifecycle Events</title>
+<path fill="none" stroke="black" d="M212.24,-71.7C222.1,-63.28 234.12,-53.02 244.93,-43.79"/>
+<polygon fill="black" stroke="black" points="247.17,-46.48 252.5,-37.33 242.62,-41.16 247.17,-46.48"/>
+</g>
+<!-- Browser Lifecycle Events&#45;&gt;BaseEvent System -->
+<g id="edge6" class="edge">
+<title>Browser Lifecycle Events&#45;&gt;BaseEvent System</title>
+<path fill="none" stroke="black" d="M297.46,-36.45C307.96,-45.71 319.25,-58.06 324.97,-72 385.58,-219.43 342.85,-228.84 326.97,-252 313.53,-271.61 291.71,-283.97 269.39,-291.76"/>
+<polygon fill="black" stroke="black" points="268.35,-288.41 259.87,-294.77 270.46,-295.09 268.35,-288.41"/>
+</g>
+<!-- Watchdogs&#45;&gt;BrowserSession -->
+<g id="edge8" class="edge">
+<title>Watchdogs&#45;&gt;BrowserSession</title>
+<path fill="none" stroke="black" d="M189.97,-215.7C189.97,-208.41 189.97,-199.73 189.97,-191.54"/>
+<polygon fill="black" stroke="black" points="193.47,-191.62 189.97,-181.62 186.47,-191.62 193.47,-191.62"/>
+</g>
+</g>
+</svg>

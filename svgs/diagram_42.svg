@@ -1,0 +1,121 @@
+<svg width="786pt" height="675pt"
+ viewBox="0.00 0.00 786.00 675.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 670.75)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-670.75 782.46,-670.75 782.46,4 -4,4"/>
+<!-- Browser Modes -->
+<g id="node1" class="node">
+<title>Browser Modes</title>
+<polygon fill="lightblue" stroke="black" points="482.75,-448 286.75,-448 286.75,-412 482.75,-412 482.75,-448"/>
+<text xml:space="preserve" text-anchor="middle" x="384.75" y="-427.2" font-family="Times,serif" font-size="14.00">Browser Modes</text>
+<text xml:space="preserve" text-anchor="middle" x="384.75" y="-416.7" font-family="Times,serif" font-size="14.00">(chromium, real, remote)</text>
+</g>
+<!-- Local Chrome Profile -->
+<g id="node2" class="node">
+<title>Local Chrome Profile</title>
+<polygon fill="lightblue" stroke="black" points="233.5,-254 0,-254 0,-218 233.5,-218 233.5,-254"/>
+<text xml:space="preserve" text-anchor="middle" x="116.75" y="-233.2" font-family="Times,serif" font-size="14.00">Local Chrome Profile</text>
+<text xml:space="preserve" text-anchor="middle" x="116.75" y="-222.7" font-family="Times,serif" font-size="14.00">(cookies, logins, extensions)</text>
+</g>
+<!-- Browser Modes&#45;&gt;Local Chrome Profile -->
+<g id="edge1" class="edge">
+<title>Browser Modes&#45;&gt;Local Chrome Profile</title>
+<path fill="none" stroke="black" d="M291.34,-411.55C244.49,-398.47 190.05,-376.08 153.25,-338.25 134.03,-318.5 124.84,-287.89 120.51,-265.5"/>
+<polygon fill="black" stroke="black" points="123.99,-265.1 118.86,-255.83 117.09,-266.27 123.99,-265.1"/>
+<text xml:space="preserve" text-anchor="middle" x="262" y="-324.95" font-family="Times,serif" font-size="14.00">uses &#45;&#45;profile in &#39;real&#39; mode</text>
+</g>
+<!-- Session Server -->
+<g id="node3" class="node">
+<title>Session Server</title>
+<polygon fill="lightblue" stroke="black" points="477.75,-254 251.75,-254 251.75,-218 477.75,-218 477.75,-254"/>
+<text xml:space="preserve" text-anchor="middle" x="364.75" y="-233.2" font-family="Times,serif" font-size="14.00">Session Server</text>
+<text xml:space="preserve" text-anchor="middle" x="364.75" y="-222.7" font-family="Times,serif" font-size="14.00">(persistent browser session)</text>
+</g>
+<!-- Browser Modes&#45;&gt;Session Server -->
+<g id="edge2" class="edge">
+<title>Browser Modes&#45;&gt;Session Server</title>
+<path fill="none" stroke="black" d="M382.94,-411.62C379.49,-378.51 371.94,-306.07 367.74,-265.67"/>
+<polygon fill="black" stroke="black" points="371.24,-265.57 366.73,-255.98 364.28,-266.29 371.24,-265.57"/>
+<text xml:space="preserve" text-anchor="middle" x="412.25" y="-324.95" font-family="Times,serif" font-size="14.00">managed by</text>
+</g>
+<!-- Cloud Profile -->
+<g id="node4" class="node">
+<title>Cloud Profile</title>
+<polygon fill="lightblue" stroke="black" points="619.25,-60 408.25,-60 408.25,-24 619.25,-24 619.25,-60"/>
+<text xml:space="preserve" text-anchor="middle" x="513.75" y="-39.2" font-family="Times,serif" font-size="14.00">Cloud Profile</text>
+<text xml:space="preserve" text-anchor="middle" x="513.75" y="-28.7" font-family="Times,serif" font-size="14.00">(persistent, API key req.)</text>
+</g>
+<!-- Local Chrome Profile&#45;&gt;Cloud Profile -->
+<g id="edge3" class="edge">
+<title>Local Chrome Profile&#45;&gt;Cloud Profile</title>
+<path fill="none" stroke="black" d="M152.68,-217.62C224.84,-182.73 387.27,-104.17 467.34,-65.44"/>
+<polygon fill="black" stroke="black" points="468.77,-68.64 476.25,-61.14 465.72,-62.34 468.77,-68.64"/>
+<text xml:space="preserve" text-anchor="middle" x="375.25" y="-130.95" font-family="Times,serif" font-size="14.00">syncs cookies to</text>
+</g>
+<!-- Cloud Profile&#45;&gt;Browser Modes -->
+<g id="edge4" class="edge">
+<title>Cloud Profile&#45;&gt;Browser Modes</title>
+<path fill="none" stroke="black" d="M513.83,-60.24C513.34,-107.77 507.02,-243.39 453.75,-338.25 440.63,-361.62 422.08,-385.65 407.53,-403.11"/>
+<polygon fill="black" stroke="black" points="405.1,-400.56 401.3,-410.45 410.44,-405.09 405.1,-400.56"/>
+<text xml:space="preserve" text-anchor="middle" x="575.35" y="-227.95" font-family="Times,serif" font-size="14.00">used by &#39;remote&#39; mode</text>
+</g>
+<!-- CLI Commands -->
+<g id="node5" class="node">
+<title>CLI Commands</title>
+<polygon fill="lightblue" stroke="black" points="378.25,-642 167.25,-642 167.25,-606 378.25,-606 378.25,-642"/>
+<text xml:space="preserve" text-anchor="middle" x="272.75" y="-621.2" font-family="Times,serif" font-size="14.00">CLI Commands</text>
+<text xml:space="preserve" text-anchor="middle" x="272.75" y="-610.7" font-family="Times,serif" font-size="14.00">(open, state, click, etc.)</text>
+</g>
+<!-- CLI Commands&#45;&gt;Browser Modes -->
+<g id="edge5" class="edge">
+<title>CLI Commands&#45;&gt;Browser Modes</title>
+<path fill="none" stroke="black" d="M282.89,-605.62C302.41,-572.15 345.37,-498.51 368.78,-458.38"/>
+<polygon fill="black" stroke="black" points="371.78,-460.19 373.79,-449.78 365.73,-456.66 371.78,-460.19"/>
+<text xml:space="preserve" text-anchor="middle" x="366.25" y="-518.95" font-family="Times,serif" font-size="14.00">configures</text>
+</g>
+<!-- CLI Commands&#45;&gt;Local Chrome Profile -->
+<g id="edge6" class="edge">
+<title>CLI Commands&#45;&gt;Local Chrome Profile</title>
+<path fill="none" stroke="black" d="M247.79,-605.56C210.06,-577.48 140.01,-518.23 112.75,-448 88.91,-386.6 100.52,-307.4 109.55,-265.66"/>
+<polygon fill="black" stroke="black" points="112.96,-266.46 111.78,-255.93 106.14,-264.9 112.96,-266.46"/>
+<text xml:space="preserve" text-anchor="middle" x="195.25" y="-421.95" font-family="Times,serif" font-size="14.00">manages local profiles</text>
+</g>
+<!-- API Key -->
+<g id="node6" class="node">
+<title>API Key</title>
+<polygon fill="lightblue" stroke="black" points="666.75,-642 410.75,-642 410.75,-606 666.75,-606 666.75,-642"/>
+<text xml:space="preserve" text-anchor="middle" x="538.75" y="-621.2" font-family="Times,serif" font-size="14.00">API Key</text>
+<text xml:space="preserve" text-anchor="middle" x="538.75" y="-610.7" font-family="Times,serif" font-size="14.00">(auth for remote/cloud features)</text>
+</g>
+<!-- API Key&#45;&gt;Browser Modes -->
+<g id="edge7" class="edge">
+<title>API Key&#45;&gt;Browser Modes</title>
+<path fill="none" stroke="black" d="M524.81,-605.62C497.74,-571.87 437.89,-497.25 405.89,-457.36"/>
+<polygon fill="black" stroke="black" points="408.7,-455.27 399.71,-449.66 403.24,-459.65 408.7,-455.27"/>
+<text xml:space="preserve" text-anchor="middle" x="536.75" y="-518.95" font-family="Times,serif" font-size="14.00">enables remote/agent</text>
+</g>
+<!-- API Key&#45;&gt;Cloud Profile -->
+<g id="edge8" class="edge">
+<title>API Key&#45;&gt;Cloud Profile</title>
+<path fill="none" stroke="black" d="M558.71,-605.71C576.73,-588.87 602.41,-561.59 615.75,-532.25 674.07,-403.98 705.31,-350.64 657.75,-218 635.16,-155.01 579.03,-98.47 543.89,-67.62"/>
+<polygon fill="black" stroke="black" points="546.45,-65.2 536.59,-61.32 541.88,-70.5 546.45,-65.2"/>
+<text xml:space="preserve" text-anchor="middle" x="729.71" y="-324.95" font-family="Times,serif" font-size="14.00">authenticates</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,100 @@
+<svg width="501pt" height="501pt"
+ viewBox="0.00 0.00 501.00 501.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 496.75)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-496.75 496.75,-496.75 496.75,4 -4,4"/>
+<!-- lint.sh -->
+<g id="node1" class="node">
+<title>lint.sh</title>
+<polygon fill="lightblue" stroke="black" points="282,-462 18.5,-462 18.5,-426 282,-426 282,-462"/>
+<text xml:space="preserve" text-anchor="middle" x="150.25" y="-441.2" font-family="Times,serif" font-size="14.00">lint.sh</text>
+<text xml:space="preserve" text-anchor="middle" x="150.25" y="-430.7" font-family="Times,serif" font-size="14.00">(Formatter, Linter, Type Checker)</text>
+</g>
+<!-- Lint Modes -->
+<g id="node2" class="node">
+<title>Lint Modes</title>
+<polygon fill="lightblue" stroke="black" points="158.5,-264 0,-264 0,-228 158.5,-228 158.5,-264"/>
+<text xml:space="preserve" text-anchor="middle" x="79.25" y="-243.2" font-family="Times,serif" font-size="14.00">Modes:</text>
+<text xml:space="preserve" text-anchor="middle" x="79.25" y="-232.7" font-family="Times,serif" font-size="14.00">Full, Quick, Staged</text>
+</g>
+<!-- lint.sh&#45;&gt;Lint Modes -->
+<g id="edge1" class="edge">
+<title>lint.sh&#45;&gt;Lint Modes</title>
+<path fill="none" stroke="black" d="M143.95,-425.61C131.63,-391.61 104.27,-316.08 89.38,-274.97"/>
+<polygon fill="black" stroke="black" points="92.75,-273.99 86.05,-265.78 86.17,-276.37 92.75,-273.99"/>
+</g>
+<!-- Lint Tools -->
+<g id="node3" class="node">
+<title>Lint Tools</title>
+<polygon fill="lightblue" stroke="black" points="350,-265.75 176.5,-265.75 176.5,-226.25 350,-226.25 350,-265.75"/>
+<text xml:space="preserve" text-anchor="middle" x="263.25" y="-248.45" font-family="Times,serif" font-size="14.00">Tools:</text>
+<text xml:space="preserve" text-anchor="middle" x="263.25" y="-237.95" font-family="Times,serif" font-size="14.00">Ruff (check, format),</text>
+<text xml:space="preserve" text-anchor="middle" x="263.25" y="-227.45" font-family="Times,serif" font-size="14.00">Pyright</text>
+</g>
+<!-- lint.sh&#45;&gt;Lint Tools -->
+<g id="edge2" class="edge">
+<title>lint.sh&#45;&gt;Lint Tools</title>
+<path fill="none" stroke="black" d="M160.28,-425.61C179.75,-391.84 222.84,-317.09 246.64,-275.8"/>
+<polygon fill="black" stroke="black" points="249.54,-277.8 251.5,-267.38 243.47,-274.3 249.54,-277.8"/>
+</g>
+<!-- Output Results -->
+<g id="node4" class="node">
+<title>Output Results</title>
+<polygon fill="lightblue" stroke="black" points="323.75,-66 202.75,-66 202.75,-30 323.75,-30 323.75,-66"/>
+<text xml:space="preserve" text-anchor="middle" x="263.25" y="-39.95" font-family="Times,serif" font-size="14.00">Output Results</text>
+</g>
+<!-- Lint Tools&#45;&gt;Output Results -->
+<g id="edge3" class="edge">
+<title>Lint Tools&#45;&gt;Output Results</title>
+<path fill="none" stroke="black" d="M263.25,-225.85C263.25,-191.28 263.25,-118.29 263.25,-77.72"/>
+<polygon fill="black" stroke="black" points="266.75,-77.76 263.25,-67.76 259.75,-77.76 266.75,-77.76"/>
+</g>
+<!-- test.sh -->
+<g id="node5" class="node">
+<title>test.sh</title>
+<polygon fill="lightblue" stroke="black" points="462.75,-462 371.75,-462 371.75,-426 462.75,-426 462.75,-462"/>
+<text xml:space="preserve" text-anchor="middle" x="417.25" y="-441.2" font-family="Times,serif" font-size="14.00">test.sh</text>
+<text xml:space="preserve" text-anchor="middle" x="417.25" y="-430.7" font-family="Times,serif" font-size="14.00">(CI Tests)</text>
+</g>
+<!-- Pytest -->
+<g id="node6" class="node">
+<title>Pytest</title>
+<polygon fill="lightblue" stroke="black" points="447.75,-264 386.75,-264 386.75,-228 447.75,-228 447.75,-264"/>
+<text xml:space="preserve" text-anchor="middle" x="417.25" y="-237.95" font-family="Times,serif" font-size="14.00">pytest</text>
+</g>
+<!-- test.sh&#45;&gt;Pytest -->
+<g id="edge4" class="edge">
+<title>test.sh&#45;&gt;Pytest</title>
+<path fill="none" stroke="black" d="M417.25,-425.61C417.25,-391.83 417.25,-317.05 417.25,-275.77"/>
+<polygon fill="black" stroke="black" points="420.75,-275.87 417.25,-265.87 413.75,-275.87 420.75,-275.87"/>
+</g>
+<!-- tests/ci directory -->
+<g id="node7" class="node">
+<title>tests/ci directory</title>
+<polygon fill="lightblue" stroke="black" points="492.75,-66 341.75,-66 341.75,-30 492.75,-30 492.75,-66"/>
+<text xml:space="preserve" text-anchor="middle" x="417.25" y="-39.95" font-family="Times,serif" font-size="14.00">tests/ci directory</text>
+</g>
+<!-- Pytest&#45;&gt;tests/ci directory -->
+<g id="edge5" class="edge">
+<title>Pytest&#45;&gt;tests/ci directory</title>
+<path fill="none" stroke="black" d="M417.25,-227.61C417.25,-193.83 417.25,-119.05 417.25,-77.77"/>
+<polygon fill="black" stroke="black" points="420.75,-77.87 417.25,-67.87 413.75,-77.87 420.75,-77.87"/>
+</g>
+</g>
+</svg>

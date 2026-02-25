@@ -1,0 +1,127 @@
+<svg width="594pt" height="594pt"
+ viewBox="0.00 0.00 594.00 594.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 590.25)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-590.25 590.25,-590.25 590.25,4 -4,4"/>
+<!-- Raw_CDP_Data -->
+<g id="node1" class="node">
+<title>Raw_CDP_Data</title>
+<polygon fill="lightblue" stroke="black" points="361.25,-575 202.75,-575 202.75,-539 361.25,-539 361.25,-575"/>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-554.2" font-family="Helvetica,sans-Serif" font-size="14.00">Raw CDP Data</text>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-543.7" font-family="Helvetica,sans-Serif" font-size="14.00">(DOM, AX, Snapshot)</text>
+</g>
+<!-- DomService -->
+<g id="node2" class="node">
+<title>DomService</title>
+<polygon fill="lightblue" stroke="black" points="395,-443 169,-443 169,-407 395,-407 395,-443"/>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-422.2" font-family="Helvetica,sans-Serif" font-size="14.00">DomService</text>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-411.7" font-family="Helvetica,sans-Serif" font-size="14.00">(browser_use/dom/service.py)</text>
+</g>
+<!-- Raw_CDP_Data&#45;&gt;DomService -->
+<g id="edge1" class="edge">
+<title>Raw_CDP_Data&#45;&gt;DomService</title>
+<path fill="none" stroke="#333333" d="M282,-538.74C282,-517.27 282,-480.33 282,-454.61"/>
+<polygon fill="#333333" stroke="#333333" points="285.5,-454.85 282,-444.85 278.5,-454.85 285.5,-454.85"/>
+<text xml:space="preserve" text-anchor="middle" x="327" y="-482.95" font-family="Times,serif" font-size="14.00">Processed by</text>
+</g>
+<!-- EnhancedDOMTree -->
+<g id="node3" class="node">
+<title>EnhancedDOMTree</title>
+<polygon fill="lightblue" stroke="black" points="387.5,-311 176.5,-311 176.5,-275 387.5,-275 387.5,-311"/>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-290.2" font-family="Helvetica,sans-Serif" font-size="14.00">EnhancedDOMTreeNode</text>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-279.7" font-family="Helvetica,sans-Serif" font-size="14.00">(browser_use/dom/views.py)</text>
+</g>
+<!-- DomService&#45;&gt;EnhancedDOMTree -->
+<g id="edge2" class="edge">
+<title>DomService&#45;&gt;EnhancedDOMTree</title>
+<path fill="none" stroke="#333333" d="M282,-406.74C282,-385.27 282,-348.33 282,-322.61"/>
+<polygon fill="#333333" stroke="#333333" points="285.5,-322.85 282,-312.85 278.5,-322.85 285.5,-322.85"/>
+<text xml:space="preserve" text-anchor="middle" x="308.25" y="-350.95" font-family="Times,serif" font-size="14.00">Creates</text>
+</g>
+<!-- EvalSerializer -->
+<g id="node4" class="node">
+<title>EvalSerializer</title>
+<polygon fill="lightblue" stroke="black" points="166,-179 0,-179 0,-143 166,-143 166,-179"/>
+<text xml:space="preserve" text-anchor="middle" x="83" y="-158.2" font-family="Helvetica,sans-Serif" font-size="14.00">DOMEvalSerializer</text>
+<text xml:space="preserve" text-anchor="middle" x="83" y="-147.7" font-family="Helvetica,sans-Serif" font-size="14.00">(eval_serializer.py)</text>
+</g>
+<!-- EnhancedDOMTree&#45;&gt;EvalSerializer -->
+<g id="edge3" class="edge">
+<title>EnhancedDOMTree&#45;&gt;EvalSerializer</title>
+<path fill="none" stroke="#333333" d="M246.8,-274.55C225.03,-263.31 196.79,-247.91 173,-232.25 151.71,-218.24 129.1,-200.58 111.87,-186.47"/>
+<polygon fill="#333333" stroke="#333333" points="114.49,-184.09 104.55,-180.42 110.03,-189.49 114.49,-184.09"/>
+<text xml:space="preserve" text-anchor="middle" x="225.5" y="-218.95" font-family="Times,serif" font-size="14.00">Serialized for</text>
+</g>
+<!-- CodeUseSerializer -->
+<g id="node5" class="node">
+<title>CodeUseSerializer</title>
+<polygon fill="lightblue" stroke="black" points="380,-179 184,-179 184,-143 380,-143 380,-179"/>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-158.2" font-family="Helvetica,sans-Serif" font-size="14.00">DOMCodeAgentSerializer</text>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-147.7" font-family="Helvetica,sans-Serif" font-size="14.00">(code_use_serializer.py)</text>
+</g>
+<!-- EnhancedDOMTree&#45;&gt;CodeUseSerializer -->
+<g id="edge4" class="edge">
+<title>EnhancedDOMTree&#45;&gt;CodeUseSerializer</title>
+<path fill="none" stroke="#333333" d="M282,-274.74C282,-253.27 282,-216.33 282,-190.61"/>
+<polygon fill="#333333" stroke="#333333" points="285.5,-190.85 282,-180.85 278.5,-190.85 285.5,-190.85"/>
+<text xml:space="preserve" text-anchor="middle" x="334.5" y="-218.95" font-family="Times,serif" font-size="14.00">Serialized for</text>
+</g>
+<!-- MarkdownExtractor -->
+<g id="node6" class="node">
+<title>MarkdownExtractor</title>
+<polygon fill="lightblue" stroke="black" points="586.25,-179 397.75,-179 397.75,-143 586.25,-143 586.25,-179"/>
+<text xml:space="preserve" text-anchor="middle" x="492" y="-158.2" font-family="Helvetica,sans-Serif" font-size="14.00">MarkdownExtractor</text>
+<text xml:space="preserve" text-anchor="middle" x="492" y="-147.7" font-family="Helvetica,sans-Serif" font-size="14.00">(markdown_extractor.py)</text>
+</g>
+<!-- EnhancedDOMTree&#45;&gt;MarkdownExtractor -->
+<g id="edge5" class="edge">
+<title>EnhancedDOMTree&#45;&gt;MarkdownExtractor</title>
+<path fill="none" stroke="#333333" d="M315.92,-274.6C337.7,-263.13 366.42,-247.48 391,-232.25 414.3,-217.82 439.62,-200.2 459.08,-186.22"/>
+<polygon fill="#333333" stroke="#333333" points="461.12,-189.06 467.17,-180.37 457.02,-183.39 461.12,-189.06"/>
+<text xml:space="preserve" text-anchor="middle" x="453.87" y="-218.95" font-family="Times,serif" font-size="14.00">Extracts from</text>
+</g>
+<!-- LLM_Consumption -->
+<g id="node7" class="node">
+<title>LLM_Consumption</title>
+<polygon fill="lightblue" stroke="black" points="346.25,-47 217.75,-47 217.75,-11 346.25,-11 346.25,-47"/>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-20.95" font-family="Helvetica,sans-Serif" font-size="14.00">LLM Consumption</text>
+</g>
+<!-- EvalSerializer&#45;&gt;LLM_Consumption -->
+<g id="edge6" class="edge">
+<title>EvalSerializer&#45;&gt;LLM_Consumption</title>
+<path fill="none" stroke="#333333" d="M109.43,-142.74C144.51,-119.82 206.62,-79.24 245.98,-53.53"/>
+<polygon fill="#333333" stroke="#333333" points="247.74,-56.56 254.2,-48.16 243.91,-50.7 247.74,-56.56"/>
+<text xml:space="preserve" text-anchor="middle" x="214.72" y="-86.95" font-family="Times,serif" font-size="14.00">Used by</text>
+</g>
+<!-- CodeUseSerializer&#45;&gt;LLM_Consumption -->
+<g id="edge7" class="edge">
+<title>CodeUseSerializer&#45;&gt;LLM_Consumption</title>
+<path fill="none" stroke="#333333" d="M282,-142.74C282,-121.27 282,-84.33 282,-58.61"/>
+<polygon fill="#333333" stroke="#333333" points="285.5,-58.85 282,-48.85 278.5,-58.85 285.5,-58.85"/>
+<text xml:space="preserve" text-anchor="middle" x="308.25" y="-86.95" font-family="Times,serif" font-size="14.00">Used by</text>
+</g>
+<!-- MarkdownExtractor&#45;&gt;LLM_Consumption -->
+<g id="edge8" class="edge">
+<title>MarkdownExtractor&#45;&gt;LLM_Consumption</title>
+<path fill="none" stroke="#333333" d="M464.11,-142.74C427.01,-119.77 361.27,-79.07 319.75,-53.37"/>
+<polygon fill="#333333" stroke="#333333" points="321.63,-50.42 311.29,-48.13 317.95,-56.37 321.63,-50.42"/>
+<text xml:space="preserve" text-anchor="middle" x="419.55" y="-86.95" font-family="Times,serif" font-size="14.00">Used by</text>
+</g>
+</g>
+</svg>
