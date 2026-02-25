@@ -1,0 +1,100 @@
+<svg width="810pt" height="810pt"
+ viewBox="0.00 0.00 810.00 810.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 805.75)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-805.75 805.75,-805.75 805.75,4 -4,4"/>
+<!-- Browser -->
+<g id="node1" class="node">
+<title>Browser</title>
+<polygon fill="lightblue" stroke="#3399ff" stroke-width="2" points="509.5,-748 336,-748 336,-712 509.5,-712 509.5,-748"/>
+<text xml:space="preserve" text-anchor="middle" x="422.75" y="-727.2" font-family="Times,serif" font-size="14.00">Browser Configuration</text>
+<text xml:space="preserve" text-anchor="middle" x="422.75" y="-716.7" font-family="Times,serif" font-size="14.00">(Browser Class)</text>
+</g>
+<!-- CloudService -->
+<g id="node2" class="node">
+<title>CloudService</title>
+<polygon fill="lightblue" stroke="#3399ff" stroke-width="2" points="173.5,-419 0,-419 0,-383 173.5,-383 173.5,-419"/>
+<text xml:space="preserve" text-anchor="middle" x="86.75" y="-398.2" font-family="Times,serif" font-size="14.00">Cloud Browser Service</text>
+<text xml:space="preserve" text-anchor="middle" x="86.75" y="-387.7" font-family="Times,serif" font-size="14.00">(use_cloud=True)</text>
+</g>
+<!-- Browser&#45;&gt;CloudService -->
+<g id="edge1" class="edge">
+<title>Browser&#45;&gt;CloudService</title>
+<path fill="none" stroke="black" d="M402.26,-711.08C369.33,-682.1 302.81,-622.88 248.75,-570.25 198.34,-521.18 141.85,-461.34 110.68,-427.87"/>
+<polygon fill="black" stroke="black" points="113.35,-425.61 103.98,-420.66 108.22,-430.37 113.35,-425.61"/>
+<text xml:space="preserve" text-anchor="middle" x="301.25" y="-556.95" font-family="Times,serif" font-size="14.00">Configured via</text>
+</g>
+<!-- LocalBrowser -->
+<g id="node3" class="node">
+<title>LocalBrowser</title>
+<polygon fill="lightblue" stroke="#3399ff" stroke-width="2" points="447.75,-419 191.75,-419 191.75,-383 447.75,-383 447.75,-419"/>
+<text xml:space="preserve" text-anchor="middle" x="319.75" y="-398.2" font-family="Times,serif" font-size="14.00">Local Browser</text>
+<text xml:space="preserve" text-anchor="middle" x="319.75" y="-387.7" font-family="Times,serif" font-size="14.00">(executable_path, user_data_dir)</text>
+</g>
+<!-- Browser&#45;&gt;LocalBrowser -->
+<g id="edge2" class="edge">
+<title>Browser&#45;&gt;LocalBrowser</title>
+<path fill="none" stroke="black" d="M414.89,-711.19C402.27,-682.11 377.22,-622.45 360.75,-570.25 345.53,-522.03 332.62,-464.56 325.54,-430.8"/>
+<polygon fill="black" stroke="black" points="329.05,-430.46 323.6,-421.38 322.19,-431.88 329.05,-430.46"/>
+<text xml:space="preserve" text-anchor="middle" x="413.25" y="-556.95" font-family="Times,serif" font-size="14.00">Configured via</text>
+</g>
+<!-- CDPConnection -->
+<g id="node4" class="node">
+<title>CDPConnection</title>
+<polygon fill="lightblue" stroke="#3399ff" stroke-width="2" points="587.25,-419 466.25,-419 466.25,-383 587.25,-383 587.25,-419"/>
+<text xml:space="preserve" text-anchor="middle" x="526.75" y="-398.2" font-family="Times,serif" font-size="14.00">CDP Connection</text>
+<text xml:space="preserve" text-anchor="middle" x="526.75" y="-387.7" font-family="Times,serif" font-size="14.00">(cdp_url)</text>
+</g>
+<!-- Browser&#45;&gt;CDPConnection -->
+<g id="edge3" class="edge">
+<title>Browser&#45;&gt;CDPConnection</title>
+<path fill="none" stroke="black" d="M428.34,-711.42C445.38,-657.86 496.74,-496.35 517.7,-430.46"/>
+<polygon fill="black" stroke="black" points="520.98,-431.7 520.67,-421.11 514.31,-429.58 520.98,-431.7"/>
+<text xml:space="preserve" text-anchor="middle" x="516" y="-556.95" font-family="Times,serif" font-size="14.00">Connects to</text>
+</g>
+<!-- ParallelExecution -->
+<g id="node6" class="node">
+<title>ParallelExecution</title>
+<polygon fill="lightblue" stroke="#3399ff" stroke-width="2" points="801.75,-419 605.75,-419 605.75,-383 801.75,-383 801.75,-419"/>
+<text xml:space="preserve" text-anchor="middle" x="703.75" y="-398.2" font-family="Times,serif" font-size="14.00">Parallel Execution</text>
+<text xml:space="preserve" text-anchor="middle" x="703.75" y="-387.7" font-family="Times,serif" font-size="14.00">(Isolated user_data_dir)</text>
+</g>
+<!-- Browser&#45;&gt;ParallelExecution -->
+<g id="edge5" class="edge">
+<title>Browser&#45;&gt;ParallelExecution</title>
+<path fill="none" stroke="black" d="M438.28,-711.47C464.08,-682.31 517.33,-621.92 561.75,-570.25 604.57,-520.44 653.89,-461.69 681.68,-428.44"/>
+<polygon fill="black" stroke="black" points="684.23,-430.85 687.96,-420.93 678.86,-426.36 684.23,-430.85"/>
+<text xml:space="preserve" text-anchor="middle" x="599.47" y="-556.95" font-family="Times,serif" font-size="14.00">Supports</text>
+</g>
+<!-- PlaywrightIntegration -->
+<g id="node5" class="node">
+<title>PlaywrightIntegration</title>
+<polygon fill="lightblue" stroke="#3399ff" stroke-width="2" points="617.25,-90 436.25,-90 436.25,-54 617.25,-54 617.25,-90"/>
+<text xml:space="preserve" text-anchor="middle" x="526.75" y="-69.2" font-family="Times,serif" font-size="14.00">Playwright Integration</text>
+<text xml:space="preserve" text-anchor="middle" x="526.75" y="-58.7" font-family="Times,serif" font-size="14.00">(Shared CDP)</text>
+</g>
+<!-- CDPConnection&#45;&gt;PlaywrightIntegration -->
+<g id="edge4" class="edge">
+<title>CDPConnection&#45;&gt;PlaywrightIntegration</title>
+<path fill="none" stroke="black" d="M526.75,-382.42C526.75,-328.97 526.75,-168.02 526.75,-101.87"/>
+<polygon fill="black" stroke="black" points="530.25,-102.18 526.75,-92.18 523.25,-102.18 530.25,-102.18"/>
+<text xml:space="preserve" text-anchor="middle" x="553" y="-227.95" font-family="Times,serif" font-size="14.00">Enables</text>
+</g>
+</g>
+</svg>

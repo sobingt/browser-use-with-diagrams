@@ -1,0 +1,114 @@
+<svg width="457pt" height="457pt"
+ viewBox="0.00 0.00 457.00 457.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 452.5)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-452.5 452.5,-452.5 452.5,4 -4,4"/>
+<!-- CLI_Client -->
+<g id="node1" class="node">
+<title>CLI_Client</title>
+<polygon fill="lightblue" stroke="#2196f3" stroke-width="2" points="193.54,-449 102.54,-449 102.54,-413 193.54,-413 193.54,-449"/>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-428.2" font-family="Helvetica,sans-Serif" font-size="14.00">CLI Client</text>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-417.7" font-family="Helvetica,sans-Serif" font-size="14.00">(main.py)</text>
+</g>
+<!-- IPC_Mechanism -->
+<g id="node2" class="node">
+<title>IPC_Mechanism</title>
+<polygon fill="lightblue" stroke="#2196f3" stroke-width="2" points="227.29,-366 68.79,-366 68.79,-330 227.29,-330 227.29,-366"/>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-345.2" font-family="Helvetica,sans-Serif" font-size="14.00">IPC Mechanism</text>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-334.7" font-family="Helvetica,sans-Serif" font-size="14.00">(Unix Socket / TCP)</text>
+</g>
+<!-- CLI_Client&#45;&gt;IPC_Mechanism -->
+<g id="edge1" class="edge">
+<title>CLI_Client&#45;&gt;IPC_Mechanism</title>
+<path fill="none" stroke="#616161" stroke-width="1.5" d="M123.96,-412.25C118.72,-407.08 113.9,-400.99 111.04,-394.25 108.3,-387.79 109.74,-381.51 113.3,-375.8"/>
+<polygon fill="#616161" stroke="#616161" stroke-width="1.5" points="115.69,-378.4 119.48,-368.5 110.35,-373.87 115.69,-378.4"/>
+<text xml:space="preserve" text-anchor="middle" x="163.54" y="-380.95" font-family="Times,serif" font-size="14.00">Sends Requests</text>
+</g>
+<!-- IPC_Mechanism&#45;&gt;CLI_Client -->
+<g id="edge7" class="edge">
+<title>IPC_Mechanism&#45;&gt;CLI_Client</title>
+<path fill="none" stroke="#616161" stroke-width="1.5" d="M208.6,-374.5C211.44,-377.28 213.96,-380.36 216.04,-383.75 224.76,-398 211.3,-408.88 194.12,-416.5"/>
+<polygon fill="#616161" stroke="#616161" stroke-width="1.5" points="211.03,-371.96 201.05,-368.41 206.64,-377.41 211.03,-371.96"/>
+<text xml:space="preserve" text-anchor="middle" x="275.02" y="-380.95" font-family="Times,serif" font-size="14.00">Sends Responses</text>
+</g>
+<!-- Session_Server -->
+<g id="node3" class="node">
+<title>Session_Server</title>
+<polygon fill="lightblue" stroke="#2196f3" stroke-width="2" points="208.54,-284 87.54,-284 87.54,-248 208.54,-248 208.54,-284"/>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-263.2" font-family="Helvetica,sans-Serif" font-size="14.00">Session Server</text>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-252.7" font-family="Helvetica,sans-Serif" font-size="14.00">(server.py)</text>
+</g>
+<!-- IPC_Mechanism&#45;&gt;Session_Server -->
+<g id="edge2" class="edge">
+<title>IPC_Mechanism&#45;&gt;Session_Server</title>
+<path fill="none" stroke="#616161" stroke-width="1.5" d="M148.04,-329.25C148.04,-319.78 148.04,-307.88 148.04,-297.03"/>
+<polygon fill="#616161" stroke="#616161" stroke-width="1.5" points="151.54,-297.25 148.04,-287.25 144.54,-297.25 151.54,-297.25"/>
+<text xml:space="preserve" text-anchor="middle" x="211.79" y="-298.95" font-family="Times,serif" font-size="14.00">Receives Requests</text>
+</g>
+<!-- Browser_Session_Manager -->
+<g id="node4" class="node">
+<title>Browser_Session_Manager</title>
+<polygon fill="lightblue" stroke="#2196f3" stroke-width="2" points="208.54,-119 87.54,-119 87.54,-83 208.54,-83 208.54,-119"/>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-98.2" font-family="Helvetica,sans-Serif" font-size="14.00">BrowserSession</text>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-87.7" font-family="Helvetica,sans-Serif" font-size="14.00">(sessions.py)</text>
+</g>
+<!-- Session_Server&#45;&gt;Browser_Session_Manager -->
+<g id="edge3" class="edge">
+<title>Session_Server&#45;&gt;Browser_Session_Manager</title>
+<path fill="none" stroke="#616161" stroke-width="1.5" d="M148.04,-247.25C148.04,-219.44 148.04,-165.33 148.04,-131.57"/>
+<polygon fill="#616161" stroke="#616161" stroke-width="1.5" points="151.54,-132 148.04,-122 144.54,-132 151.54,-132"/>
+<text xml:space="preserve" text-anchor="middle" x="174.29" y="-174.95" font-family="Times,serif" font-size="14.00">Manages</text>
+</g>
+<!-- Python_Interpreter -->
+<g id="node5" class="node">
+<title>Python_Interpreter</title>
+<polygon fill="lightblue" stroke="#2196f3" stroke-width="2" points="416.29,-201 257.79,-201 257.79,-165 416.29,-165 416.29,-201"/>
+<text xml:space="preserve" text-anchor="middle" x="337.04" y="-180.2" font-family="Helvetica,sans-Serif" font-size="14.00">PythonSession</text>
+<text xml:space="preserve" text-anchor="middle" x="337.04" y="-169.7" font-family="Helvetica,sans-Serif" font-size="14.00">(python_session.py)</text>
+</g>
+<!-- Session_Server&#45;&gt;Python_Interpreter -->
+<g id="edge4" class="edge">
+<title>Session_Server&#45;&gt;Python_Interpreter</title>
+<path fill="none" stroke="#616161" stroke-width="1.5" d="M189.98,-247.02C217.76,-235.12 254.41,-219.41 284.17,-206.66"/>
+<polygon fill="#616161" stroke="#616161" stroke-width="1.5" points="285.31,-209.98 293.12,-202.82 282.55,-203.54 285.31,-209.98"/>
+<text xml:space="preserve" text-anchor="middle" x="310.1" y="-215.95" font-family="Times,serif" font-size="14.00">Executes Python</text>
+</g>
+<!-- Web_Browser -->
+<g id="node6" class="node">
+<title>Web_Browser</title>
+<polygon fill="lightblue" stroke="#2196f3" stroke-width="2" points="253.54,-36 42.54,-36 42.54,0 253.54,0 253.54,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-15.2" font-family="Helvetica,sans-Serif" font-size="14.00">Web Browser</text>
+<text xml:space="preserve" text-anchor="middle" x="148.04" y="-4.7" font-family="Helvetica,sans-Serif" font-size="14.00">(Chromium / Real / Remote)</text>
+</g>
+<!-- Browser_Session_Manager&#45;&gt;Web_Browser -->
+<g id="edge5" class="edge">
+<title>Browser_Session_Manager&#45;&gt;Web_Browser</title>
+<path fill="none" stroke="#616161" stroke-width="1.5" d="M148.04,-82.02C148.04,-72.38 148.04,-60.23 148.04,-49.18"/>
+<polygon fill="#616161" stroke="#616161" stroke-width="1.5" points="151.54,-49.2 148.04,-39.2 144.54,-49.2 151.54,-49.2"/>
+<text xml:space="preserve" text-anchor="middle" x="178.04" y="-50.95" font-family="Times,serif" font-size="14.00">Controls</text>
+</g>
+<!-- Python_Interpreter&#45;&gt;Browser_Session_Manager -->
+<g id="edge6" class="edge">
+<title>Python_Interpreter&#45;&gt;Browser_Session_Manager</title>
+<path fill="none" stroke="#616161" stroke-width="1.5" d="M294.62,-164.05C267.02,-152.36 230.8,-137.03 201.27,-124.53"/>
+<polygon fill="#616161" stroke="#616161" stroke-width="1.5" points="202.98,-121.45 192.4,-120.78 200.25,-127.9 202.98,-121.45"/>
+<text xml:space="preserve" text-anchor="middle" x="283.85" y="-133.95" font-family="Times,serif" font-size="14.00">Controls</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,110 @@
+<svg width="616pt" height="537pt"
+ viewBox="0.00 0.00 616.00 537.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 532.5)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-532.5 611.73,-532.5 611.73,4 -4,4"/>
+<!-- Local Development -->
+<g id="node1" class="node">
+<title>Local Development</title>
+<polygon fill="lightblue" stroke="black" points="296.25,-499 100.25,-499 100.25,-463 296.25,-463 296.25,-499"/>
+<text xml:space="preserve" text-anchor="middle" x="198.25" y="-472.95" font-family="Times,serif" font-size="14.00">Local Development (User)</text>
+</g>
+<!-- Setup Script -->
+<g id="node2" class="node">
+<title>Setup Script</title>
+<polygon fill="lightblue" stroke="black" points="106.25,-282 0.25,-282 0.25,-246 106.25,-246 106.25,-282"/>
+<text xml:space="preserve" text-anchor="middle" x="53.25" y="-255.95" font-family="Times,serif" font-size="14.00">bin/setup.sh</text>
+</g>
+<!-- Local Development&#45;&gt;Setup Script -->
+<g id="edge1" class="edge">
+<title>Local Development&#45;&gt;Setup Script</title>
+<path fill="none" stroke="black" d="M164.36,-462.55C134.59,-445.33 92.69,-416.11 70.75,-378.25 55.73,-352.33 52.32,-317.73 52.07,-293.62"/>
+<polygon fill="black" stroke="black" points="55.56,-293.94 52.15,-283.9 48.56,-293.87 55.56,-293.94"/>
+<text xml:space="preserve" text-anchor="middle" x="119.5" y="-364.95" font-family="Times,serif" font-size="14.00">initial setup</text>
+</g>
+<!-- Linter Script -->
+<g id="node3" class="node">
+<title>Linter Script</title>
+<polygon fill="lightblue" stroke="black" points="411.5,-282 313,-282 313,-246 411.5,-246 411.5,-282"/>
+<text xml:space="preserve" text-anchor="middle" x="362.25" y="-255.95" font-family="Times,serif" font-size="14.00">bin/lint.sh</text>
+</g>
+<!-- Local Development&#45;&gt;Linter Script -->
+<g id="edge2" class="edge">
+<title>Local Development&#45;&gt;Linter Script</title>
+<path fill="none" stroke="black" d="M211.39,-462.77C240,-425.26 308.07,-336.03 342.13,-291.38"/>
+<polygon fill="black" stroke="black" points="344.84,-293.59 348.13,-283.52 339.28,-289.34 344.84,-293.59"/>
+<text xml:space="preserve" text-anchor="middle" x="355.25" y="-364.95" font-family="Times,serif" font-size="14.00">ensures code quality</text>
+</g>
+<!-- Test Script -->
+<g id="node4" class="node">
+<title>Test Script</title>
+<polygon fill="lightblue" stroke="black" points="528.5,-282 430,-282 430,-246 528.5,-246 528.5,-282"/>
+<text xml:space="preserve" text-anchor="middle" x="479.25" y="-255.95" font-family="Times,serif" font-size="14.00">bin/test.sh</text>
+</g>
+<!-- Local Development&#45;&gt;Test Script -->
+<g id="edge3" class="edge">
+<title>Local Development&#45;&gt;Test Script</title>
+<path fill="none" stroke="black" d="M277.33,-462.58C328,-447.77 391.97,-421.77 434.25,-378.25 457.03,-354.8 468.71,-318.4 474.38,-293.22"/>
+<polygon fill="black" stroke="black" points="477.76,-294.18 476.34,-283.68 470.9,-292.77 477.76,-294.18"/>
+<text xml:space="preserve" text-anchor="middle" x="525.23" y="-364.95" font-family="Times,serif" font-size="14.00">verifies functionality</text>
+</g>
+<!-- Docker Builds -->
+<g id="node6" class="node">
+<title>Docker Builds</title>
+<polygon fill="lightblue" stroke="black" points="218.5,-65 0,-65 0,-29 218.5,-29 218.5,-65"/>
+<text xml:space="preserve" text-anchor="middle" x="109.25" y="-44.2" font-family="Times,serif" font-size="14.00">docker/build&#45;base&#45;images.sh</text>
+<text xml:space="preserve" text-anchor="middle" x="109.25" y="-33.7" font-family="Times,serif" font-size="14.00">Dockerfile.fast</text>
+</g>
+<!-- Setup Script&#45;&gt;Docker Builds -->
+<g id="edge6" class="edge">
+<title>Setup Script&#45;&gt;Docker Builds</title>
+<path fill="none" stroke="black" d="M49.2,-245.52C44.74,-223.11 39.32,-183.29 48.25,-150.75 56.04,-122.38 73.91,-93.92 88.31,-74.16"/>
+<polygon fill="black" stroke="black" points="90.92,-76.51 94.13,-66.42 85.33,-72.31 90.92,-76.51"/>
+<text xml:space="preserve" text-anchor="middle" x="108.25" y="-147.95" font-family="Times,serif" font-size="14.00">installs dev env</text>
+</g>
+<!-- Contribution Guidelines -->
+<g id="node5" class="node">
+<title>Contribution Guidelines</title>
+<polygon fill="lightblue" stroke="black" points="482.5,-65 294,-65 294,-29 482.5,-29 482.5,-65"/>
+<text xml:space="preserve" text-anchor="middle" x="388.25" y="-44.2" font-family="Times,serif" font-size="14.00">.github/CONTRIBUTING.md</text>
+<text xml:space="preserve" text-anchor="middle" x="388.25" y="-33.7" font-family="Times,serif" font-size="14.00">.github/SECURITY.md</text>
+</g>
+<!-- Linter Script&#45;&gt;Contribution Guidelines -->
+<g id="edge4" class="edge">
+<title>Linter Script&#45;&gt;Contribution Guidelines</title>
+<path fill="none" stroke="black" d="M364.33,-245.77C368.79,-208.89 379.3,-122 384.78,-76.67"/>
+<polygon fill="black" stroke="black" points="388.25,-77.16 385.97,-66.82 381.3,-76.32 388.25,-77.16"/>
+<text xml:space="preserve" text-anchor="middle" x="412.75" y="-147.95" font-family="Times,serif" font-size="14.00">adheres to</text>
+</g>
+<!-- Test Script&#45;&gt;Contribution Guidelines -->
+<g id="edge5" class="edge">
+<title>Test Script&#45;&gt;Contribution Guidelines</title>
+<path fill="none" stroke="black" d="M476.86,-245.73C473.35,-223.22 465.72,-182.92 452.25,-150.75 440.67,-123.1 422.12,-94.36 407.97,-74.33"/>
+<polygon fill="black" stroke="black" points="410.99,-72.54 402.31,-66.47 405.31,-76.63 410.99,-72.54"/>
+<text xml:space="preserve" text-anchor="middle" x="493.18" y="-147.95" font-family="Times,serif" font-size="14.00">adheres to</text>
+</g>
+<!-- Docker Builds&#45;&gt;Local Development -->
+<g id="edge7" class="edge">
+<title>Docker Builds&#45;&gt;Local Development</title>
+<path fill="none" stroke="black" d="M122.44,-65.45C136.47,-85.06 158.02,-118.39 168.25,-150.75 185.87,-206.51 194.45,-382.1 197.21,-451.44"/>
+<polygon fill="black" stroke="black" points="193.71,-451.36 197.59,-461.21 200.7,-451.09 193.71,-451.36"/>
+<text xml:space="preserve" text-anchor="middle" x="243.41" y="-255.95" font-family="Times,serif" font-size="14.00">provides images</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,105 @@
+<svg width="565pt" height="406pt"
+ viewBox="0.00 0.00 565.00 406.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 401.75)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-401.75 560.5,-401.75 560.5,4 -4,4"/>
+<!-- API Key Retrieval Start -->
+<g id="node1" class="node">
+<title>API Key Retrieval Start</title>
+<polygon fill="lightblue" stroke="black" points="397.75,-396 254.25,-396 254.25,-360 397.75,-360 397.75,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="326" y="-369.95" font-family="Times,serif" font-size="14.00">require_api_key()</text>
+</g>
+<!-- Environment Variables -->
+<g id="node2" class="node">
+<title>Environment Variables</title>
+<polygon fill="lightblue" stroke="black" points="340.75,-314 167.25,-314 167.25,-278 340.75,-278 340.75,-314"/>
+<text xml:space="preserve" text-anchor="middle" x="254" y="-293.2" font-family="Times,serif" font-size="14.00">Environment Variable</text>
+<text xml:space="preserve" text-anchor="middle" x="254" y="-282.7" font-family="Times,serif" font-size="14.00">(BROWSER_USE_API_KEY)</text>
+</g>
+<!-- API Key Retrieval Start&#45;&gt;Environment Variables -->
+<g id="edge1" class="edge">
+<title>API Key Retrieval Start&#45;&gt;Environment Variables</title>
+<path fill="none" stroke="black" d="M310.38,-359.64C300.66,-348.84 287.99,-334.76 277.12,-322.69"/>
+<polygon fill="black" stroke="black" points="279.9,-320.54 270.6,-315.45 274.69,-325.22 279.9,-320.54"/>
+</g>
+<!-- APIKeyRequired Error -->
+<g id="node6" class="node">
+<title>APIKeyRequired Error</title>
+<polygon fill="lightblue" stroke="black" points="384.25,-38 255.75,-38 255.75,-2 384.25,-2 384.25,-38"/>
+<text xml:space="preserve" text-anchor="middle" x="320" y="-17.2" font-family="Times,serif" font-size="14.00">APIKeyRequired</text>
+<text xml:space="preserve" text-anchor="middle" x="320" y="-6.7" font-family="Times,serif" font-size="14.00">(Error Message)</text>
+</g>
+<!-- API Key Retrieval Start&#45;&gt;APIKeyRequired Error -->
+<g id="edge6" class="edge">
+<title>API Key Retrieval Start&#45;&gt;APIKeyRequired Error</title>
+<path fill="none" stroke="black" d="M348.59,-359.56C364.88,-344.85 384,-322.22 384,-297 384,-297 384,-297 384,-111 384,-87.82 382.81,-80.07 370,-60.75 366.35,-55.24 361.69,-50.15 356.69,-45.57"/>
+<polygon fill="black" stroke="black" points="359.15,-43.06 349.23,-39.34 354.66,-48.44 359.15,-43.06"/>
+<text xml:space="preserve" text-anchor="middle" x="470.25" y="-195.95" font-family="Times,serif" font-size="14.00">if not found and no TTY</text>
+</g>
+<!-- Config File -->
+<g id="node3" class="node">
+<title>Config File</title>
+<polygon fill="lightblue" stroke="black" points="348.25,-222 69.75,-222 69.75,-186 348.25,-186 348.25,-222"/>
+<text xml:space="preserve" text-anchor="middle" x="209" y="-201.2" font-family="Times,serif" font-size="14.00">Config File</text>
+<text xml:space="preserve" text-anchor="middle" x="209" y="-190.7" font-family="Times,serif" font-size="14.00">(~/.config/browser&#45;use/config.json)</text>
+</g>
+<!-- Environment Variables&#45;&gt;Config File -->
+<g id="edge2" class="edge">
+<title>Environment Variables&#45;&gt;Config File</title>
+<path fill="none" stroke="black" d="M245.32,-277.65C238.91,-264.82 230.05,-247.11 222.69,-232.38"/>
+<polygon fill="black" stroke="black" points="225.93,-231.03 218.33,-223.65 219.67,-234.16 225.93,-231.03"/>
+<text xml:space="preserve" text-anchor="middle" x="277.85" y="-241.95" font-family="Times,serif" font-size="14.00">if not found</text>
+</g>
+<!-- Interactive Prompt -->
+<g id="node4" class="node">
+<title>Interactive Prompt</title>
+<polygon fill="lightblue" stroke="black" points="284.5,-130 133.5,-130 133.5,-94 284.5,-94 284.5,-130"/>
+<text xml:space="preserve" text-anchor="middle" x="209" y="-109.2" font-family="Times,serif" font-size="14.00">Interactive Prompt</text>
+<text xml:space="preserve" text-anchor="middle" x="209" y="-98.7" font-family="Times,serif" font-size="14.00">(if TTY)</text>
+</g>
+<!-- Config File&#45;&gt;Interactive Prompt -->
+<g id="edge3" class="edge">
+<title>Config File&#45;&gt;Interactive Prompt</title>
+<path fill="none" stroke="black" d="M209,-185.65C209,-173.2 209,-156.14 209,-141.68"/>
+<polygon fill="black" stroke="black" points="212.5,-141.81 209,-131.81 205.5,-141.81 212.5,-141.81"/>
+<text xml:space="preserve" text-anchor="middle" x="254" y="-149.95" font-family="Times,serif" font-size="14.00">if not found</text>
+</g>
+<!-- Save API Key -->
+<g id="node5" class="node">
+<title>Save API Key</title>
+<polygon fill="lightblue" stroke="black" points="166,-38 0,-38 0,-2 166,-2 166,-38"/>
+<text xml:space="preserve" text-anchor="middle" x="83" y="-17.2" font-family="Times,serif" font-size="14.00">save_api_key()</text>
+<text xml:space="preserve" text-anchor="middle" x="83" y="-6.7" font-family="Times,serif" font-size="14.00">(Secure Permissions)</text>
+</g>
+<!-- Interactive Prompt&#45;&gt;Save API Key -->
+<g id="edge4" class="edge">
+<title>Interactive Prompt&#45;&gt;Save API Key</title>
+<path fill="none" stroke="black" d="M133.18,-98.24C117.65,-92.36 102.77,-83.77 92,-71.25 86.86,-65.27 84.2,-57.38 82.93,-49.62"/>
+<polygon fill="black" stroke="black" points="86.42,-49.38 82.04,-39.73 79.45,-50 86.42,-49.38"/>
+<text xml:space="preserve" text-anchor="middle" x="167" y="-57.95" font-family="Times,serif" font-size="14.00">user chooses to save</text>
+</g>
+<!-- Interactive Prompt&#45;&gt;APIKeyRequired Error -->
+<g id="edge5" class="edge">
+<title>Interactive Prompt&#45;&gt;APIKeyRequired Error</title>
+<path fill="none" stroke="black" d="M223.81,-93.71C232.98,-83.52 245.29,-70.72 257.5,-60.75 264.43,-55.09 272.22,-49.57 279.88,-44.53"/>
+<polygon fill="black" stroke="black" points="281.61,-47.57 288.16,-39.24 277.85,-41.67 281.61,-47.57"/>
+<text xml:space="preserve" text-anchor="middle" x="313.75" y="-57.95" font-family="Times,serif" font-size="14.00">if not provided</text>
+</g>
+</g>
+</svg>
