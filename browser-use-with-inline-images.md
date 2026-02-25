@@ -52,12 +52,6 @@ Practical applications and illustrative examples demonstrate the library's capab
 ![](svgs/diagram_2.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) repository provides a structured environment for development, contribution, and code quality maintenance. New contributors can set up their local environment, understand contribution guidelines, and utilize scripts for development, testing, and ensuring code quality.
 
 Detailed guidelines for contributing to the project, including setting up a local development environment and identifying open issues, are provided in the repository's [`.github`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/bin/test.sh#L2) directory, specifically in [`.github/CONTRIBUTING.md`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/.github/CONTRIBUTING.md). Information on reporting security vulnerabilities is also available in [`.github/SECURITY.md`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/.github/SECURITY.md).
@@ -113,12 +107,6 @@ For security-related concerns, a dedicated process is outlined in [`.github/SECU
 ![](svgs/diagram_3.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The local development environment for the project is configured and managed through a set of shell scripts located in the [`bin`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/bin) directory. These scripts streamline the setup process, ensure consistent dependency management, and provide tools for maintaining code quality.
 
 The primary setup script, [`bin/setup.sh`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/bin/setup.sh), automates the initial configuration of the local environment. This script installs [`uv`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L6), a Python package installer, creates a dedicated virtual environment, and then installs all necessary project dependencies, including those for development and extra functionalities. It also provides instructions for activating the virtual environment and integrating with interactive Python environments like [`ipython`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/bin/setup.sh#L49) for direct library usage. To ensure the environment variables for logging and LLM API keys are correctly set, it guides users on configuring a [`.env`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L36) file and verifies the successful installation of the project package.
@@ -140,12 +128,6 @@ For validating the project's functionality, the [`bin/test.sh`](https://github.c
 ![](svgs/diagram_4.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The project maintains code quality and ensures reliability through a set of scripts that automate linting, formatting, type checking, and testing. These scripts are designed to integrate seamlessly into the development workflow, providing options for both comprehensive and rapid checks.
 
 The [`lint.sh`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L1010) script, located at [`bin/lint.sh`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/bin/lint.sh), enforces code style and catches potential errors across Python files. It offers three modes of operation: a full mode that runs all checks on all project files, a quick mode that focuses on changed files and skips slower type checking for faster feedback, and a staged mode that processes only files staged for commit. This script utilizes tools like [`ruff check`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLAUDE.md?plain=1#L50) for linting, [`ruff format`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLAUDE.md?plain=1#L50) for automatic code formatting, and [`pyright`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLAUDE.md?plain=1#L49) for static type checking. To minimize execution time, these checks are run in parallel, with outputs logged to temporary files for detailed error reporting. The script also includes a [`fail-fast`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/bin/lint.sh#L7) option, allowing developers to immediately identify and address issues.
@@ -166,12 +148,6 @@ These scripts are part of the broader [Project Setup and Development Workflow](h
 
 ![](svgs/diagram_5.svg)
 
-
-
-
-link
-
-zoom\_in
 
 This project utilizes Docker to establish reproducible and optimized development and deployment environments. The approach focuses on efficient image construction, leveraging multi-stage builds and pre-built base images to significantly reduce build times. The core components for this system reside in the [`docker`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/docker) directory.
 
@@ -198,12 +174,6 @@ By maintaining these distinct base images, the project achieves significantly fa
 ![](svgs/diagram_6.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) project utilizes a structured approach to Docker image building to optimize development workflows and deployment. This involves creating multi-platform base images that are pre-configured with essential system dependencies, the Chromium browser, and Python dependencies. This layered approach significantly reduces subsequent build times and ensures consistent environments.
 
 The base images are defined within the [`docker/base-images`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/docker/base-images) directory. The build process for these images is automated by the [`docker/build-base-images.sh`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/docker/build-base-images.sh) script, which handles the sequential construction and optional pushing to a Docker registry, supporting multi-platform architectures through [`docker buildx`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/Dockerfile#L1).
@@ -228,12 +198,6 @@ This tiered image construction strategy allows for rapid iteration and deploymen
 
 ![](svgs/diagram_7.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) project provides foundational components for browser automation, focusing on low-level interactions with web browsers primarily through the Chrome DevTools Protocol (CDP). This architecture allows for granular control over browser sessions, pages, and individual elements, supporting various automation tasks from simple navigation to complex AI-driven interactions.
 
@@ -266,12 +230,6 @@ For visual feedback and debugging, a demo mode is implemented via [`browser_use/
 ![](svgs/diagram_8.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The core of low-level browser interaction is provided by the [`CDP-Use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLAUDE.md?plain=1#L73) library, primarily residing in the [`browser_use/actor`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor) directory. This library leverages the Chrome DevTools Protocol (CDP) to enable direct and fine-grained control over web browsers, abstracting many of the complexities of raw CDP commands into a more manageable API. The library exposes key components for browser interaction, including [`Page`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/page.py#L39), [`Element`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/element.py#L62), and [`Mouse`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/mouse.py#L12) objects, which facilitate navigation, DOM manipulation, and input control.
 
 The [`Page`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/page.py#L39) class, defined in [`browser_use/actor/page.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/page.py), represents a single browser tab or iframe and is the primary interface for page-level operations. It manages navigation tasks such as loading URLs, reloading pages, and moving through browsing history. Beyond navigation, the [`Page`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/page.py#L39) class allows for the execution of arbitrary JavaScript code within the page's context and enables the capture of screenshots. It also integrates with large language models (LLMs) to perform intelligent tasks, such as identifying interactive elements on a page based on natural language prompts and extracting structured data from page content. For instance, [`get_element_by_prompt`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/page.py#L399) uses an LLM to locate elements by their description, while [`extract_content`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/tests/ci/infrastructure/test_registry_validation.py#L70) leverages LLMs to parse page content into structured formats.
@@ -296,12 +254,6 @@ The capabilities of this low-level browser automation are further showcased in t
 
 ![](svgs/diagram_9.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The core of browser automation lies in the [`BrowserSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py#L94) class, defined in [`browser_use/browser/session.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py). This class provides an event-driven framework for managing a web browser's lifecycle and interactions. It abstracts the complexities of the Chrome DevTools Protocol (CDP), allowing both high-level control for AI agents and direct interaction when needed.
 
@@ -328,12 +280,6 @@ Furthermore, the [`BrowserSession`](https://github.com/browser-use/browser-use/b
 ![](svgs/diagram_10.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The browser automation system employs a comprehensive event-driven communication system, centered around the [`BaseEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/tests/ci/conftest.py#L34) class, to manage interactions within and across different components. This approach enables various parts of the system, such as agents and internal browser modules, to communicate without direct dependencies, promoting modularity and scalability. All events are defined as [`pydantic`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L15) models, ensuring type safety and predictable data structures throughout the system.
 
 Events are categorized into several groups to reflect different aspects of browser operation. High-level browser actions, initiated by agents or tools, include commands to [`NavigateToUrlEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L110), [`ClickElementEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L125), [`TypeTextEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L147), and [`ScrollEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L159). These events encapsulate the desired browser interaction along with any necessary parameters, such as a target URL, DOM node, or text input. The system also manages browser lifecycle events, such as [`BrowserStartEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L292) and [`BrowserStopEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L301), which signify the beginning and end of a browser session, or [`BrowserLaunchEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L316) and [`BrowserKillEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/events.py#L324) for managing the browser process itself.
@@ -356,12 +302,6 @@ The system also includes specific events for unique scenarios, such as [`AboutBl
 
 ![](svgs/diagram_11.svg)
 
-
-
-
-link
-
-zoom\_in
 
 Browser profiles are managed to provide a configurable and consistent browser environment for automation tasks. The core [`BrowserProfile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/profile.py#L538) class, defined in [`browser_use/browser/profile.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/profile.py), aggregates various settings necessary for launching and configuring a browser instance. These settings include command-line arguments passed to the browser executable, context settings that define the browsing environment (such as user agent or viewport size), and proxy settings for routing network traffic.
 
@@ -496,12 +436,6 @@ This collection of watchdogs ensures comprehensive management and monitoring of 
 ![](svgs/diagram_12.svg)
 
 
-
-
-link
-
-zoom\_in
-
 Integration with cloud browser services is managed through the [`CloudBrowserClient`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/cloud.py#L19), which handles the creation, termination, and general management of cloud-based browser instances. This client utilizes an asynchronous HTTP client to communicate with the cloud service API. Key functionalities include [`create_browser`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/cloud.py#L27) for provisioning a new browser instance and [`stop_browser`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/cloud.py#L104) for releasing resources. These operations are governed by request and response models, such as [`CreateBrowserRequest`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/views.py#L28) and [`CloudBrowserResponse`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/views.py#L67), defined in [`browser_use/browser/cloud/views.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/views.py). These models ensure structured data exchange and validation with the cloud API.
 
 Authentication to the cloud browser service is managed by retrieving an API token, primarily from the [`BROWSER_USE_API_KEY`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L19) environment variable or a configuration file. The [`CloudBrowserClient`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/cloud.py#L19) in [`browser_use/browser/cloud/cloud.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/cloud.py) is designed to handle various HTTP status codes and network errors, raising specific exceptions like [`CloudBrowserAuthError`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/views.py#L86) for authentication failures or [`CloudBrowserError`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/views.py#L80) for general service issues. This robust error handling helps in diagnosing and managing interactions with the cloud service. The system also tracks the [`current_session_id`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/cloud.py#L25) to manage the active cloud browser session, simplifying commands like [`stop_browser`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/cloud/cloud.py#L104) when a specific session ID is not provided. Within a [Browser Session and Lifecycle Management](https://codewiki.google/github.com/browser-use/browser-use#browser-automation-core-browser-session-and-lifecycle-management), the [`BrowserSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py#L94) class can be configured to use a cloud browser by setting relevant parameters in its [`BrowserProfile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/profile.py#L538).
@@ -518,12 +452,6 @@ Authentication to the cloud browser service is managed by retrieving an API toke
 
 ![](svgs/diagram_13.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The system includes a demo mode for visual logging that injects a JavaScript panel into the browser to display live log messages and events dispatched from Python. This allows for real-time visual feedback and debugging directly within the browser interface. The [`DemoMode`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/demo_mode.py#L800) class in [`browser_use/browser/demo_mode.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/demo_mode.py) manages the injection of this JavaScript panel and the broadcasting of log messages.
 
@@ -546,12 +474,6 @@ For additional information on how browser sessions are managed, see [Browser Ses
 ![](svgs/diagram_14.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The system provides functionality for visual debugging by drawing bounding boxes and text overlays directly on screenshots of web pages. This Python-based image processing approach, primarily implemented in [`browser_use/browser/python_highlights.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/python_highlights.py), replaces JavaScript-based highlighting. This method is particularly useful for visually identifying interactive DOM elements, assisting in debugging, and guiding automation processes.
 
 The core of this functionality lies within the [`create_highlighted_screenshot`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/python_highlights.py#L409) asynchronous function. This function takes a base64-encoded screenshot and a map of interactive DOM elements, then decodes the screenshot and uses an [`ImageDraw.Draw`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/gif.py#L226) object for rendering. It iterates through the interactive elements, calling [`process_element_highlight`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/python_highlights.py#L340) for each to draw visual cues. Accurate scaling is ensured by using the [`device_pixel_ratio`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/views.py#L201) to translate CSS pixel coordinates to device pixel coordinates, critical for precise highlighting across varying screen resolutions. The output is a base64-encoded PNG image. The [`create_highlighted_screenshot_async`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/python_highlights.py#L502) function wraps this process, optionally retrieving viewport information from a [`cdp_session`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/docs/customize/hooks.mdx#L49) using [`get_viewport_info_from_cdp`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/python_highlights.py#L470) to ensure accurate positioning even with page scrolling.
@@ -572,12 +494,6 @@ This Python-based approach ensures consistent visual feedback, independent of th
 
 ![](svgs/diagram_15.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The system integrates and orchestrates AI agents to perform advanced browser automation tasks. This involves managing the agent's state, integrating with Large Language Models (LLMs) for decision-making and action generation, executing browser actions, maintaining conversation history, and interacting with a virtual file system.
 
@@ -601,12 +517,6 @@ The system supports a wide array of LLMs from different providers, providing a u
 
 ![](svgs/diagram_16.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`Agent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/service.py#L132) class in [`browser_use/agent/service.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/service.py) is central to orchestrating autonomous browser automation tasks. It manages the lifecycle of an agent from task initiation to completion, integrating large language models (LLMs) for decision-making and executing actions within a browser environment.
 
@@ -635,12 +545,6 @@ The agent's state is meticulously managed using Pydantic models defined in [`bro
 ![](svgs/diagram_17.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The agent's message and prompt management system is responsible for shaping the conversational context provided to Large Language Models (LLMs), enabling them to make informed decisions and generate effective actions. This system primarily revolves around the [`MessageManager`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/service.py#L99) and prompt generation classes like [`SystemPrompt`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/prompts.py#L27) and [`AgentMessagePrompt`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/prompts.py#L103).
 
 Central to this is the [`MessageManager`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/service.py#L99), defined in [`browser_use/agent/message_manager/service.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/service.py), which maintains a detailed [`agent_history_items`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/views.py#L91) to track the agent's step-by-step execution. This history is crucial for the LLM to understand the progression of a task. To prevent LLM context windows from being overwhelmed, the [`MessageManager`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/service.py#L99) implements a message compaction strategy. This involves summarizing older [`agent_history_items`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/views.py#L91) into a [`compacted_memory`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/views.py#L97) block, using an LLM to generate the summary when a certain [`trigger_char_count`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/views.py#L39) or [`step_number`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/message_manager/views.py#L18) threshold is reached. This ensures that the LLM always receives a concise yet comprehensive overview of past interactions.
@@ -665,12 +569,6 @@ Together, these components ensure that the LLM receives a carefully curated and 
 
 ![](svgs/diagram_18.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The framework for integrating various Large Language Models (LLMs) into the [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) ecosystem is designed to provide a consistent and abstract interface for interacting with different providers. This standardization is achieved through the [`BaseChatModel`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/llm/base.py#L18) protocol, which defines a uniform asynchronous invocation method for all LLMs, regardless of their specific API or implementation. This approach ensures that developers can switch between different LLM providers with minimal code changes.
 
@@ -873,12 +771,6 @@ Each integration ensures that despite varying API structures and features, the c
 ![](svgs/diagram_19.svg)
 
 
-
-
-link
-
-zoom\_in
-
 This section focuses on the mechanisms for executing Python code within the [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) environment, particularly for browser automation tasks, both locally and remotely. It provides an overview of the notebook-like Python code execution environment, which offers Large Language Models (LLMs) persistent namespace access and control over the browser. It also covers type-safe sandboxing for remote function execution, including serialization and event streaming.
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) environment provides a "Code-Use Mode" where an LLM can generate and execute Python code to automate browser interactions. This system is designed to mimic a Jupyter notebook, allowing for an iterative and programmatic approach to web automation. The [`CodeAgent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/service.py#L54) in [`browser_use/code_use/service.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/service.py) orchestrates this process, managing the interaction between an LLM, a browser session, and a persistent Python execution environment. This setup allows the LLM to write incremental Python code that operates within a persistent namespace, enabling it to carry variables and functions across execution steps.
@@ -902,12 +794,6 @@ Communication with the sandboxed environment relies on Server-Sent Events (SSE),
 ![](svgs/diagram_20.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`CodeAgent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/service.py#L54) system facilitates browser automation by enabling Large Language Models (LLMs) to generate and execute Python code in a persistent, Jupyter-like environment. This approach allows LLMs to control browser actions, manage data, and perform iterative tasks with a rich set of browser control functions and data science libraries. The system captures the entire execution history and state for evaluation and debugging, promoting a dynamic and adaptive workflow.
 
 The core of this system is the [`CodeAgent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/service.py#L54) class, which orchestrates the interaction between the LLM, a browser session, and the Python execution environment. It iteratively requests Python code from the LLM, executes it, and provides the LLM with updated browser state. The execution environment, created by [`create_namespace`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/namespace.py#L256) in [`browser_use/code_use/namespace.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/namespace.py), is populated with browser control functions such as [`navigate`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L411), [`click`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L2122), [`input_text`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/tests/ci/infrastructure/test_registry_validation.py#L210), [`scroll`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L1241), and [`evaluate`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L1846). These functions allow the LLM to interact with web pages, perform navigation, and execute JavaScript directly within the browser context. The [`evaluate`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L1846) function, in particular, is designed to enable direct DOM manipulation and structured data extraction through JavaScript, bridging the gap between Python logic and browser-side operations. The namespace also includes standard Python libraries ([`json`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L30), [`asyncio`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L107), [`Path`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L316), [`csv`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L1620), [`re`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L980), [`datetime`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/config.py#L6), [`requests`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L7)) and can optionally integrate data science libraries like [`numpy`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/pyproject.toml#L64), [`pandas`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/pyproject.toml#L64), and [`BeautifulSoup`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/README.md?plain=1#L42) if they are installed, enhancing the agent's data processing capabilities.
@@ -928,12 +814,6 @@ To support analysis and reproducibility, the system provides mechanisms for mana
 
 ![](svgs/diagram_21.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`create_namespace`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/namespace.py#L256) function, defined in [`browser_use/code_use/namespace.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/namespace.py), establishes a Python execution environment tailored for Large Language Models (LLMs) to interact with a web browser. This namespace is persistent, resembling a Jupyter notebook's state, and provides LLMs with direct programmatic control over browser actions and access to common data science utilities.
 
@@ -957,12 +837,6 @@ The [`create_namespace`](https://github.com/browser-use/browser-use/blob/c011d07
 
 ![](svgs/diagram_22.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`CodeAgent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/service.py#L54) orchestrates browser automation by integrating a Large Language Model (LLM) with a browser session and a Python execution environment, as defined in [`browser_use/code_use/service.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/service.py). Its primary function is to execute complex tasks by iteratively asking an LLM for Python code, running that code, and providing feedback to the LLM about the current browser state.
 
@@ -991,12 +865,6 @@ The [`CodeAgent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41
 ![](svgs/diagram_23.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`format_browser_state_for_llm`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/formatting.py#L12) function, found in [`browser_use/code_use/formatting.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/formatting.py), plays a key role in structuring the current state of a browser session into a coherent, readable format for a Large Language Model (LLM). This process is designed to give the LLM a clear picture of the web environment, enabling it to generate effective Python code for browser automation tasks. The formatted output provides essential context, including the current URL, page title, details on all open tabs, the page's scroll position, and any network requests that are still pending. Furthermore, it organizes and presents the variables available within the execution namespace, distinguishing between those created within specific code blocks and general variables, along with their data types and condensed string representations. A crucial component of this output is a compact, truncated representation of the Document Object Model (DOM), which is vital for the LLM to understand the webpage's structure and identify interactive elements.
 
 In conjunction with this state formatting, the [`system_prompt.md`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/pyproject.toml#L170) file, located at [`browser_use/code_use/system_prompt.md`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/system_prompt.md), outlines the agent's "Mental Model" and "STRATEGY," which are foundational for guiding the LLM's decision-making and code generation. This prompt establishes an iterative, notebook-like execution paradigm where the LLM produces and executes one Python code cell at a time. It explicitly details the asynchronous browser interaction functions available to the agent, such as [`navigate`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L411), [`click`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L2122), [`input_text`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/tests/ci/infrastructure/test_registry_validation.py#L210), and [`evaluate`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L1846) for executing JavaScript. A central design principle emphasized is the use of element indices for interactions, with the caveat that these indices are temporary and necessitate re-querying after any changes to the DOM. The prompt also lays out a structured strategy for accomplishing tasks, progressing from initial exploration and validation to batch processing and final verification, while stressing the importance of debugging and reviewing intermediate results. The [`done`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L2025) function is highlighted as the definitive step for marking task completion.
@@ -1014,12 +882,6 @@ In conjunction with this state formatting, the [`system_prompt.md`](https://gith
 ![](svgs/diagram_24.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The system manages and exports code execution sessions through several data models and utility functions, ensuring that the history of interactions and browser states can be reviewed, reproduced, or shared. The [`CodeCell`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py#L32) model in [`browser_use/code_use/views.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py) represents an individual unit of execution, encapsulating the code executed, its output, status (e.g., [`PENDING`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py#L26), [`SUCCESS`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py#L28), [`ERROR`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sandbox/views.py#L22)), and the browser's state at that moment. These cells are aggregated within a [`NotebookSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py#L47) also defined in [`browser_use/code_use/views.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py), which maintains the overall sequence of actions, a persistent namespace for variables, and a comprehensive history of the agent's steps. The [`CodeAgentHistory`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py#L165) object stores a detailed record of each step, including LLM outputs, execution results, browser state snapshots, and performance metadata.
 
 For external sharing or further analysis, sessions can be exported. The [`export_to_ipynb`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/notebook_export.py#L12) function in [`browser_use/code_use/notebook_export.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/notebook_export.py) converts a session into a Jupyter notebook file, which includes the setup for [`BrowserSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py#L94) and [`create_namespace`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/namespace.py#L256) to make the notebook directly executable. This allows for a complete playback of the automation sequence within a standard notebook environment. Similarly, the [`session_to_python_script`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/notebook_export.py#L177) function in [`browser_use/code_use/notebook_export.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/notebook_export.py) generates a standalone Python script, embedding the necessary browser control functions and the executed code cells into a single, runnable file. Both export mechanisms are designed to preserve embedded JavaScript logic and ensure the reproducibility of the automation tasks.
@@ -1036,12 +898,6 @@ For external sharing or further analysis, sessions can be exported. The [`export
 
 ![](svgs/diagram_25.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The sandbox environment provides a mechanism for executing Python functions securely and remotely, particularly for browser automation tasks, by abstracting away the complexities of deployment and communication. It enables the execution of asynchronous Python functions within a managed environment, offering real-time feedback through event streaming and ensuring type-safe reconstruction of results.
 
@@ -1066,12 +922,6 @@ The data models for SSE communication are defined in [`browser_use/sandbox/views
 ![](svgs/diagram_26.svg)
 
 
-
-
-link
-
-zoom\_in
-
 Remote function execution within the sandboxed environment relies on robust serialization and deserialization processes to transmit code and data between the client and the sandbox. The [`sandbox`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sandbox/sandbox.py#L215) decorator, defined in [`browser_use/sandbox/sandbox.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sandbox/sandbox.py), orchestrates this by capturing the function's source code, its parameters, and any referenced variables. This information is then packaged using [`cloudpickle`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/pyproject.toml#L47), a library chosen for its ability to serialize complex Python objects, including closures, which standard [`json`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L30) or [`pickle`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sandbox/sandbox.py#L305) might struggle with. The serialized data is then [`base64`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L355) encoded for transmission.
 
 Upon receiving the serialized payload, the sandbox environment reconstructs the execution context. After the remote function completes its execution, its return value is serialized back to the client. On the client side, the [`_parse_with_type_annotation`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sandbox/sandbox.py#L533) function in [`browser_use/sandbox/sandbox.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sandbox/sandbox.py) is responsible for deserializing this result. It reconstructs complex Python objects, such as Pydantic models, dataclasses, and Enums, based on the function's return type annotation. This reconstruction process occurs without triggering Pydantic or dataclass validation, assuming the sandbox's output conforms to the expected schema. This design ensures that the remote function's return value is accurately transformed back into the appropriate local Python type, facilitating seamless integration with the client's codebase. For further details on the remote execution environment, refer to [Type-Safe Sandboxed Remote Execution](https://codewiki.google/github.com/browser-use/browser-use#code-execution-and-sandboxing-type-safe-sandboxed-remote-execution).
@@ -1088,12 +938,6 @@ Upon receiving the serialized payload, the sandbox environment reconstructs the 
 
 ![](svgs/diagram_27.svg)
 
-
-
-
-link
-
-zoom\_in
 
 Server-Sent Events (SSE) provide a mechanism for real-time communication between the client and the sandbox environment. This system facilitates streaming events from the remote execution of Python functions, offering immediate feedback on browser creation, logs, execution results, and errors. The [`sandbox`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sandbox/sandbox.py#L215) decorator, detailed in [Type-Safe Sandboxed Remote Execution](https://codewiki.google/github.com/browser-use/browser-use#code-execution-and-sandboxing-type-safe-sandboxed-remote-execution), orchestrates this communication.
 
@@ -1113,12 +957,6 @@ The [`SSEEvent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c
 
 ![](svgs/diagram_28.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The processing of browser Document Object Model (DOM) data is central to interacting with and understanding web pages. This system transforms raw DOM snapshots from the Chrome DevTools Protocol (CDP) into an enhanced, actionable representation. This representation includes crucial information such as element visibility, clickability, and layout details like bounding boxes. The core of this processing is handled in the [`browser_use/dom/service.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/service.py) file, which orchestrates the retrieval and enhancement of DOM data from various CDP domains, including [`DOMSnapshot`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLAUDE.md?plain=1#L78), [`DOM`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/AGENTS.md?plain=1#L612), [`Accessibility`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/views.py#L60), [`Page`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/actor/page.py#L39), and [`Runtime`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/config.py#L166). The resulting [`EnhancedDOMTreeNode`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/views.py#L373) objects, defined in [`browser_use/dom/views.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/views.py), aggregate these diverse data points, providing a comprehensive view of each DOM element. This includes not only standard DOM properties but also accessibility information and snapshot data such as computed styles and paint order. The system also supports generating stable hashes for elements, crucial for tracking elements across page changes and enabling features like historical replay.
 
@@ -1140,12 +978,6 @@ For interactive analysis and debugging of DOM extraction and processing, the [`b
 
 ![](svgs/diagram_29.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) system transforms raw Chrome DevTools Protocol (CDP) DOM snapshots into an enhanced, actionable representation of a web page. This process integrates various data points from the browser to provide a comprehensive understanding of each DOM element's visibility, interactivity, and layout.
 
@@ -1176,12 +1008,6 @@ The resulting [`EnhancedDOMTreeNode`](https://github.com/browser-use/browser-use
 ![](svgs/diagram_30.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) framework employs sophisticated strategies for serializing enhanced DOM trees into various formats, specifically tailored for consumption by different AI agents, such as Large Language Models (LLMs) and code agents. This serialization process prioritizes token efficiency, the preservation of interactivity, and structural relevance to ensure that AI agents receive an optimal representation of the web page.
 
 The overall DOM processing pipeline begins with transforming raw Chrome DevTools Protocol (CDP) DOM snapshot data into an enriched representation that includes element visibility, clickability, and layout information. This enhanced data, encapsulated in [`EnhancedDOMTreeNode`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/views.py#L373) objects, serves as the foundation for all subsequent serialization. For more details on this initial processing step, see [Enhanced DOM Data Processing and Representation](https://codewiki.google/github.com/browser-use/browser-use#dom-processing-and-content-extraction-enhanced-dom-data-processing-and-representation).
@@ -1210,12 +1036,6 @@ After these various filtering and optimization steps, interactive elements are a
 
 ![](svgs/diagram_31.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The module [`browser_use/dom/markdown_extractor.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/markdown_extractor.py) processes browser content into clean, structured markdown. The [`extract_clean_markdown`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/markdown_extractor.py#L22) function takes content from either a [`BrowserSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py#L94) or a [`DomService`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/service.py#L35), converts it to HTML using an [`HTMLSerializer`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/dom/serializer/html_serializer.py#L6) (described in [Optimized DOM Serialization for AI Agents](https://codewiki.google/github.com/browser-use/browser-use#dom-processing-and-content-extraction-optimized-dom-serialization-for-ai-agents)), and then transforms the HTML into markdown. This process includes preprocessing steps to remove URL encoding artifacts, large JSON blobs, and excessive newlines, ensuring the markdown is clean and readable.
 
@@ -1258,12 +1078,6 @@ A key aspect of this utility is its handling of dynamic attributes and special c
 ![](svgs/diagram_32.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The virtual file system within [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) enables agents to manage in-memory file objects that are also persistently stored on disk. This system supports various file types, offering specialized read/write operations tailored to their formats. The [`browser_use/filesystem`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem) directory contains the core implementation of this file system.
 
 The [`FileSystem`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L295) class, defined in [`browser_use/filesystem/file_system.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py), acts as the central manager, maintaining both an in-memory representation of files and synchronizing their content with a dedicated directory on disk. This approach provides rapid access to file data while ensuring persistence. It leverages an abstract [`BaseFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L83) class, with concrete implementations for common file types such as [`MarkdownFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L142), [`TxtFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L150), and [`JsonFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L158). Specialized file types like [`PdfFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L182) and [`DocxFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L231) extend this base with custom [`sync_to_disk_sync`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L109) and [`sync_to_disk`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L113) methods, allowing the system to render their text content into the respective document formats. For instance, [`PdfFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L182) utilizes [`reportlab`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/pyproject.toml#L43) to generate PDF documents from text content, while [`DocxFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L231) uses the [`docx`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/pyproject.toml#L49) library. This design facilitates extensibility and encapsulates type-specific logic.
@@ -1287,12 +1101,6 @@ Agent actions related to email interaction, such as [`get_recent_emails`](https:
 ![](svgs/diagram_33.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The virtual file system in [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) provides an in-memory representation of files that are asynchronously persisted to disk, ensuring that agents can quickly access and manipulate data while maintaining state across sessions. The core component of this system is the [`FileSystem`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L295) class, defined in [`browser_use/filesystem/file_system.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py), which manages all file operations. It is responsible for initializing the file system within a specified base directory, and for mapping file extensions to their corresponding [`BaseFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L83) subclasses.
 
 The [`BaseFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L83) class, an abstract blueprint for all file types also in [`browser_use/filesystem/file_system.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py), defines common properties such as filename and content, and methods for reading, writing, and appending content. Each [`BaseFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L83) object stores its content in memory, allowing for rapid access and modification by the agent. Crucially, any changes to a [`BaseFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L83) object's content trigger an asynchronous write operation to disk. This is handled by [`sync_to_disk`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L113), which uses a thread pool executor to perform disk I/O without blocking the main event loop, ensuring that file operations do not impede the agent's responsiveness.
@@ -1313,12 +1121,6 @@ Beyond standard text files, the virtual file system also incorporates specialize
 
 ![](svgs/diagram_34.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The virtual file system in [`browser_use/filesystem`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem) supports specialized file types such as [`PdfFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L182) and [`DocxFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L231), which extend the [`BaseFile`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/filesystem/file_system.py#L83) abstraction to provide custom read/write capabilities beyond basic text handling. These specialized file types are designed to intelligently interact with complex document formats.
 
@@ -1355,12 +1157,6 @@ For filenames that contain invalid characters but are otherwise structurally sou
 ![](svgs/diagram_35.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`GmailService`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/service.py#L25) class, primarily defined in [`browser_use/integrations/gmail/service.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/service.py), centralizes the management of Gmail API interactions. This service is instrumental in enabling browser automation agents to interact with Gmail, performing tasks such as reading emails and extracting verification codes.
 
 The [`GmailService`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/service.py#L25) class handles authentication with the Gmail API using OAuth2. It supports both file-based authentication, where credentials and tokens are managed via specified file paths, and direct authentication using an [`access_token`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/sync/auth.py#L202). The service also implements robust token management, automatically loading, refreshing, and saving tokens to ensure persistent authentication sessions. This design minimizes the need for repeated user interaction after initial authorization. The authentication process includes an [`InstalledAppFlow`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/service.py#L16) for user consent, which opens a browser for the user to grant access.
@@ -1380,12 +1176,6 @@ The [`register_gmail_actions`](https://github.com/browser-use/browser-use/blob/c
 ![](svgs/diagram_36.svg)
 
 
-
-
-link
-
-zoom\_in
-
 Agent actions provide a programmatic way for AI agents to interact with external services, specifically Gmail in this context. The core mechanism involves registering these actions within a [`Tools`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/service.py#L345) object, making them callable by an agent.
 
 The [`get_recent_emails`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/actions.py#L51) action is a primary function available to agents, designed to retrieve recent email messages. When an agent invokes this action, it can specify search criteria using [`GetRecentEmailsParams`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/actions.py#L22). This parameter object allows for defining a [`keyword`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/actions.py#L25) to filter emails (e.g., 'otp' for one-time passwords, 'github' for notifications) and setting [`max_results`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/views.py#L28) to control the number of emails returned. Additionally, the action automatically applies a [`time_filter`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/integrations/gmail/service.py#L139) of five minutes to focus on the most recent communications, ensuring that agents primarily process current information.
@@ -1404,12 +1194,6 @@ Before executing, the system ensures that the [`GmailService`](https://github.co
 
 ![](svgs/diagram_37.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) project integrates the Model Context Protocol (MCP) to enable communication between AI agents and browser automation capabilities. This allows [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) to act as both a client that can consume tools from external MCP servers and a server that exposes its own browser automation functionalities to other MCP clients. The core of this integration is managed within the [`browser_use/mcp`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/mcp) directory.
 
@@ -1432,12 +1216,6 @@ The [`MCPToolWrapper`](https://github.com/browser-use/browser-use/blob/c011d07e7
 ![](svgs/diagram_38.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`MCPClient`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/mcp/client.py#L47) in [`browser_use/mcp/client.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/mcp/client.py) enables [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) to connect with external Model Context Protocol (MCP) servers. This integration allows [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) to leverage functionalities exposed by other services as if they were native actions. The client establishes a connection to an MCP server, typically by spawning a process and communicating over standard I/O. Once connected, it queries the MCP server to discover available tools and their respective schemas.
 
 A key aspect of this integration is the dynamic registration of these external MCP tools as callable actions within the [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) framework. Each discovered MCP tool is wrapped into an asynchronous function, which is then registered in a [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) [`Registry`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/tools/registry/service.py#L32) object. This mechanism ensures that [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) agents can seamlessly interact with external MCP services. The client also manages the conversion of JSON Schema definitions for MCP tool parameters into Pydantic models. This dynamic model generation provides strong type validation and clear parameter definitions for the [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) actions, facilitating robust and predictable interactions with external tools. The client also captures telemetry for connection, disconnection, and tool call events, providing insights into the usage and performance of these integrations. Further details on the overall MCP integration can be found in [Model Context Protocol (MCP) Integration](https://codewiki.google/github.com/browser-use/browser-use#model-context-protocol-mcp-integration).
@@ -1454,12 +1232,6 @@ A key aspect of this integration is the dynamic registration of these external M
 
 ![](svgs/diagram_39.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`BrowserUseServer`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/mcp/server.py#L187) component exposes [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9)'s browser automation capabilities to external clients via the Model Context Protocol (MCP). This allows various external systems, such as AI agents or development environments, to programmatically interact with a web browser managed by [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9). The server provides a standardized, language-agnostic interface for browser control, enabling a decoupled architecture where browser tasks can be initiated and monitored remotely.
 
@@ -1490,12 +1262,6 @@ The core of this integration is the [`mcp_action_wrapper`](https://github.com/br
 ![](svgs/diagram_40.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) command-line interface (CLI) provides a persistent and efficient way to automate web browser interactions. Its primary goal is to enable fast execution of browser commands by maintaining active browser sessions in the background. This architecture reduces latency and allows for complex, multi-step browser workflows to be executed seamlessly from the command line.
 
 The CLI, primarily defined in [`browser_use/skill_cli`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli), acts as a client that communicates with a separate session server. This server, implemented in [`browser_use/skill_cli/server.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/server.py), manages instances of [`BrowserSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py#L94) and keeps them alive across commands. Communication between the client and server occurs via Inter-Process Communication (IPC), utilizing Unix sockets on non-Windows systems and TCP sockets on Windows, following a structured wire protocol defined in [`browser_use/skill_cli/protocol.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/protocol.py). This design ensures that the CLI client can start quickly, while computationally intensive browser operations are handled by the persistent server.
@@ -1523,12 +1289,6 @@ The overall structure of the CLI commands is modular, with distinct handlers for
 ![](svgs/diagram_41.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) CLI is designed around a client-server architecture to provide fast and persistent browser automation. This architecture ensures that a browser instance can remain active across multiple CLI commands, significantly reducing the overhead associated with launching a new browser for each operation.
 
 The core of this system involves a client, primarily initiated by [`browser_use/skill_cli/main.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/main.py), which communicates with a persistent [`SessionServer`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/server.py#L26). This server, implemented in [`browser_use/skill_cli/server.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/server.py), runs as a background process and is responsible for managing [`BrowserSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py#L94) instances. The client-server communication is handled through Inter-Process Communication (IPC) using Unix sockets on non-Windows systems and TCP sockets on Windows, adhering to a defined wire protocol specified in [`browser_use/skill_cli/protocol.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/protocol.py). This protocol uses JSON-RPC style [`Request`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/protocol.py#L12) and [`Response`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/protocol.py#L35) dataclasses for structured message exchange.
@@ -1551,12 +1311,6 @@ The modular command structure, with various command handlers located in [`browse
 
 ![](svgs/diagram_42.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The command-line interface for [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) offers various browser modes to accommodate different automation needs, including local development, real-world browsing, and cloud-based execution. These modes dictate how browser instances are launched and managed, impacting persistence, authentication, and performance.
 
@@ -1581,12 +1335,6 @@ A key feature related to profile management is the ability to synchronize cookie
 ![](svgs/diagram_43.svg)
 
 
-
-
-link
-
-zoom\_in
-
 The [`browser-use python`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) command provides a Jupyter-like environment within a persistent browser session, enabling the execution of Python code to automate browser interactions. This environment maintains a consistent namespace across multiple commands, allowing variables and imported modules to persist, thus supporting iterative development and debugging directly from the command line.
 
 The core component enabling this functionality is the [`PythonSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/python_session.py#L25) class, defined in [`browser_use/skill_cli/python_session.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/python_session.py). This class manages the persistent [`namespace`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py#L55) where user-defined variables and browser objects reside. It also tracks the execution history and results of each code snippet. When Python code is executed, [`PythonSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/python_session.py#L25) injects a [`browser`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/examples/browser/save_cookies.py#L14) object into this [`namespace`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/code_use/views.py#L55). This [`browser`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/examples/browser/save_cookies.py#L14) object is an instance of [`BrowserWrapper`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/python_session.py#L111), which serves as a synchronous interface to the underlying asynchronous browser operations. This abstraction allows users to write straightforward, synchronous Python code to control the browser, while the [`BrowserWrapper`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/python_session.py#L111) handles the complexities of asynchronous communication with the [`BrowserSession`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/browser/session.py#L94) on a separate event loop. For more details on the session server architecture, refer to [Architecture and Session Management](https://codewiki.google/github.com/browser-use/browser-use#command-line-interface-cli-for-browser-automation-architecture-and-session-management).
@@ -1605,12 +1353,6 @@ Commands for interacting with this Python environment, such as executing code st
 
 ![](svgs/diagram_44.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use run`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) command orchestrates the execution of AI agents to autonomously complete complex browser tasks. This command leverages the core capabilities of the command-line interface (CLI) to control browser interactions while integrating Large Language Models (LLMs) for decision-making and action generation. The primary entry point for agent tasks is the [`handle`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/commands/agent.py#L13) function within [`browser_use/skill_cli/commands/agent.py`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/skill_cli/commands/agent.py).
 
@@ -1632,12 +1374,6 @@ Once an LLM is configured, an [`Agent`](https://github.com/browser-use/browser-u
 
 ![](svgs/diagram_45.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) CLI incorporates a system for managing API keys, which are essential for enabling advanced features such as LLM-powered data extraction and autonomous agent tasks. This system prioritizes security and user-friendliness by supporting multiple methods for API key retrieval and ensuring secure storage.
 
@@ -1740,12 +1476,6 @@ The examples demonstrate a variety of use cases:
 ![](svgs/diagram_46.svg)
 
 
-
-
-link
-
-zoom\_in
-
 This section showcases practical applications leveraging [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) agents in conjunction with Google's generative AI models (Gemini, Veo). These examples demonstrate how AI can automate complex web-based tasks, including ad generation, message scheduling, and news monitoring with integrated analysis.
 
 For instance, the ad generation application, found in [`examples/apps/ad-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/examples/apps/ad-use), automates the creation of Instagram image ads and TikTok video ads directly from a landing page URL. An [`Agent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/service.py#L132) analyzes the landing page to extract key information, which is then used by an [`AdGenerator`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/examples/apps/ad-use/ad_generator.py#L103) to prompt Google's AI models, such as [`gemini-2.5-flash-image-preview`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/llm/vercel/chat.py#L69) for image generation and [`veo-3.0-generate-001`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/examples/apps/ad-use/ad_generator.py#L228) for video content. This application supports parallel ad generation for efficiency, storing all generated assets in a designated output directory.
@@ -1766,12 +1496,6 @@ Finally, the news monitoring application within [`examples/apps/news-use`](https
 
 ![](svgs/diagram_47.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The system supports various browser configurations, ranging from cloud-based instances to local browser control and direct interaction with the Chrome DevTools Protocol (CDP). This flexibility allows for diverse automation scenarios and integration with existing tools.
 
@@ -1837,12 +1561,6 @@ The orchestration of these tasks typically involves initializing [`CodeAgent`](h
 
 ![](svgs/diagram_48.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) library allows for extending an [`Agent`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/browser_use/agent/service.py#L132)'s capabilities by registering custom tools, enabling it to perform tasks beyond its default actions. These custom functions, defined in Python, can be made available to the agent's underlying Large Language Model (LLM) as callable actions, expanding its operational scope.
 
@@ -1930,12 +1648,6 @@ Across these introductory examples, environment variables are loaded via [`load_
 
 ![](svgs/diagram_49.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) library integrates with external communication platforms such as email, Discord, and Slack, enabling AI agents to automate tasks that are either triggered by these services or require interaction with them. This allows for scenarios where agents can receive instructions from a chat platform or handle multi-factor authentication codes from an email.
 
@@ -2166,12 +1878,6 @@ Examples demonstrating these capabilities can be found in [`examples/sandbox`](h
 
 ![](svgs/diagram_50.svg)
 
-
-
-
-link
-
-zoom\_in
 
 The [`browser-use`](https://github.com/browser-use/browser-use/blob/c011d07e7e9e41c06b5c72036c6e3efa5b9f287d/CLOUD.md?plain=1#L9) library provides various user interfaces to facilitate interaction with its AI agents for browser automation tasks. These interfaces demonstrate how to integrate the core agent functionality into different user experiences, enabling users to define tasks and control agents through command-line, web-based (Gradio), and Streamlit applications.
 
