@@ -1,0 +1,101 @@
+<svg width="447pt" height="408pt"
+ viewBox="0.00 0.00 447.00 408.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 404.25)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-404.25 442.5,-404.25 442.5,4 -4,4"/>
+<!-- BrowserState -->
+<g id="node1" class="node">
+<title>BrowserState</title>
+<polygon fill="lightblue" stroke="black" stroke-width="1.5" points="335.75,-399 162.25,-399 162.25,-363 335.75,-363 335.75,-399"/>
+<text xml:space="preserve" text-anchor="middle" x="249" y="-372.95" font-family="Times,serif" font-size="14.00">Browser State Summary</text>
+</g>
+<!-- FormattingFunction -->
+<g id="node2" class="node">
+<title>FormattingFunction</title>
+<polygon fill="lightblue" stroke="black" stroke-width="1.5" points="226,-308 0,-308 0,-272 226,-272 226,-308"/>
+<text xml:space="preserve" text-anchor="middle" x="113" y="-281.95" font-family="Times,serif" font-size="14.00">format_browser_state_for_llm</text>
+</g>
+<!-- BrowserState&#45;&gt;FormattingFunction -->
+<g id="edge1" class="edge">
+<title>BrowserState&#45;&gt;FormattingFunction</title>
+<path fill="none" stroke="#333333" stroke-width="1.2" d="M222.13,-362.42C201.36,-348.82 172.39,-329.87 149.52,-314.9"/>
+<polygon fill="#333333" stroke="#333333" stroke-width="1.2" points="151.62,-312.09 141.33,-309.54 147.78,-317.95 151.62,-312.09"/>
+<text xml:space="preserve" text-anchor="middle" x="203.83" y="-326.95" font-family="Times,serif" font-size="14.00">input</text>
+</g>
+<!-- LLM -->
+<g id="node3" class="node">
+<title>LLM</title>
+<polygon fill="lightblue" stroke="black" stroke-width="1.5" points="350,-218 214,-218 214,-182 350,-182 350,-218"/>
+<text xml:space="preserve" text-anchor="middle" x="282" y="-191.95" font-family="Times,serif" font-size="14.00">LLM (Code Agent)</text>
+</g>
+<!-- FormattingFunction&#45;&gt;LLM -->
+<g id="edge2" class="edge">
+<title>FormattingFunction&#45;&gt;LLM</title>
+<path fill="none" stroke="#333333" stroke-width="1.2" d="M131.75,-271.27C143.37,-261 158.99,-248.44 174.5,-239.75 185.88,-233.38 198.5,-227.72 210.98,-222.83"/>
+<polygon fill="#333333" stroke="#333333" stroke-width="1.2" points="212.05,-226.17 220.18,-219.38 209.58,-219.62 212.05,-226.17"/>
+<text xml:space="preserve" text-anchor="middle" x="230.75" y="-236.95" font-family="Times,serif" font-size="14.00">formatted state</text>
+</g>
+<!-- PythonCodeCells -->
+<g id="node5" class="node">
+<title>PythonCodeCells</title>
+<polygon fill="lightblue" stroke="black" stroke-width="1.5" points="356.75,-128 213.25,-128 213.25,-92 356.75,-92 356.75,-128"/>
+<text xml:space="preserve" text-anchor="middle" x="285" y="-101.95" font-family="Times,serif" font-size="14.00">Python Code Cells</text>
+</g>
+<!-- LLM&#45;&gt;PythonCodeCells -->
+<g id="edge4" class="edge">
+<title>LLM&#45;&gt;PythonCodeCells</title>
+<path fill="none" stroke="#333333" stroke-width="1.2" d="M282.59,-181.61C282.99,-169.88 283.53,-154.1 284,-140.43"/>
+<polygon fill="#333333" stroke="#333333" stroke-width="1.2" points="287.49,-140.58 284.34,-130.47 280.5,-140.34 287.49,-140.58"/>
+<text xml:space="preserve" text-anchor="middle" x="317.34" y="-146.95" font-family="Times,serif" font-size="14.00">generates</text>
+</g>
+<!-- SystemPrompt -->
+<g id="node4" class="node">
+<title>SystemPrompt</title>
+<polygon fill="lightblue" stroke="black" stroke-width="1.5" points="357.75,-308 244.25,-308 244.25,-272 357.75,-272 357.75,-308"/>
+<text xml:space="preserve" text-anchor="middle" x="301" y="-281.95" font-family="Times,serif" font-size="14.00">System Prompt</text>
+</g>
+<!-- SystemPrompt&#45;&gt;LLM -->
+<g id="edge3" class="edge">
+<title>SystemPrompt&#45;&gt;LLM</title>
+<path fill="none" stroke="#333333" stroke-width="1.2" d="M297.25,-271.61C294.69,-259.76 291.24,-243.78 288.26,-230.01"/>
+<polygon fill="#333333" stroke="#333333" stroke-width="1.2" points="291.73,-229.46 286.19,-220.43 284.88,-230.94 291.73,-229.46"/>
+<text xml:space="preserve" text-anchor="middle" x="322.07" y="-236.95" font-family="Times,serif" font-size="14.00">guidance</text>
+</g>
+<!-- BrowserSession -->
+<g id="node6" class="node">
+<title>BrowserSession</title>
+<polygon fill="lightblue" stroke="black" stroke-width="1.5" points="400.25,-38 271.75,-38 271.75,-2 400.25,-2 400.25,-38"/>
+<text xml:space="preserve" text-anchor="middle" x="336" y="-11.95" font-family="Times,serif" font-size="14.00">Browser Session</text>
+</g>
+<!-- PythonCodeCells&#45;&gt;BrowserSession -->
+<g id="edge5" class="edge">
+<title>PythonCodeCells&#45;&gt;BrowserSession</title>
+<path fill="none" stroke="#333333" stroke-width="1.2" d="M283.42,-91.67C283.27,-81.79 284.39,-69.48 289.5,-59.75 292.05,-54.89 295.5,-50.4 299.37,-46.33"/>
+<polygon fill="#333333" stroke="#333333" stroke-width="1.2" points="301.45,-49.17 306.43,-39.82 296.71,-44.03 301.45,-49.17"/>
+<text xml:space="preserve" text-anchor="middle" x="330.75" y="-56.95" font-family="Times,serif" font-size="14.00">executes on</text>
+</g>
+<!-- BrowserSession&#45;&gt;BrowserState -->
+<g id="edge6" class="edge">
+<title>BrowserSession&#45;&gt;BrowserState</title>
+<path fill="none" stroke="#333333" stroke-width="1.2" d="M355.54,-38.49C361.53,-44.7 367.68,-52.07 372,-59.75 383.16,-79.58 386,-86.24 386,-109 386,-291 386,-291 386,-291 386,-323.1 359.23,-344.21 329.36,-357.77"/>
+<polygon fill="#333333" stroke="#333333" stroke-width="1.2" points="328.23,-354.45 320.38,-361.56 330.95,-360.9 328.23,-354.45"/>
+<text xml:space="preserve" text-anchor="middle" x="412.25" y="-191.95" font-family="Times,serif" font-size="14.00">updates</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,92 @@
+<svg width="1008pt" height="1008pt"
+ viewBox="0.00 0.00 1008.00 1008.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1004.25)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-1004.25 1004.25,-1004.25 1004.25,4 -4,4"/>
+<!-- Agent -->
+<g id="node1" class="node">
+<title>Agent</title>
+<polygon fill="lightblue" stroke="black" points="549.75,-852 495.75,-852 495.75,-816 549.75,-816 549.75,-852"/>
+<text xml:space="preserve" text-anchor="middle" x="522.75" y="-825.95" font-family="Times,serif" font-size="14.00">Agent</text>
+</g>
+<!-- TwoFactorAuth -->
+<g id="node2" class="node">
+<title>TwoFactorAuth</title>
+<polygon fill="lightblue" stroke="black" points="203.5,-185 0,-185 0,-149 203.5,-149 203.5,-185"/>
+<text xml:space="preserve" text-anchor="middle" x="101.75" y="-164.2" font-family="Times,serif" font-size="14.00">Two&#45;Factor Authentication</text>
+<text xml:space="preserve" text-anchor="middle" x="101.75" y="-153.7" font-family="Times,serif" font-size="14.00">(TOTP, 1Password)</text>
+</g>
+<!-- Agent&#45;&gt;TwoFactorAuth -->
+<g id="edge1" class="edge">
+<title>Agent&#45;&gt;TwoFactorAuth</title>
+<path fill="none" stroke="black" d="M511.71,-815.55C454.15,-724.64 188.53,-305.08 118.64,-194.68"/>
+<polygon fill="black" stroke="black" points="121.79,-193.12 113.49,-186.54 115.88,-196.86 121.79,-193.12"/>
+</g>
+<!-- BrowserInteraction -->
+<g id="node3" class="node">
+<title>BrowserInteraction</title>
+<polygon fill="lightblue" stroke="black" points="387.75,-185 221.75,-185 221.75,-149 387.75,-149 387.75,-185"/>
+<text xml:space="preserve" text-anchor="middle" x="304.75" y="-164.2" font-family="Times,serif" font-size="14.00">Browser Interactions</text>
+<text xml:space="preserve" text-anchor="middle" x="304.75" y="-153.7" font-family="Times,serif" font-size="14.00">(Click, File Upload)</text>
+</g>
+<!-- Agent&#45;&gt;BrowserInteraction -->
+<g id="edge2" class="edge">
+<title>Agent&#45;&gt;BrowserInteraction</title>
+<path fill="none" stroke="black" d="M517.03,-815.55C487.35,-725 350.79,-308.45 313.94,-196.03"/>
+<polygon fill="black" stroke="black" points="317.32,-195.11 310.88,-186.7 310.67,-197.29 317.32,-195.11"/>
+</g>
+<!-- ExternalServices -->
+<g id="node4" class="node">
+<title>ExternalServices</title>
+<polygon fill="lightblue" stroke="black" points="639.5,-185 406,-185 406,-149 639.5,-149 639.5,-185"/>
+<text xml:space="preserve" text-anchor="middle" x="522.75" y="-164.2" font-family="Times,serif" font-size="14.00">External Service Integrations</text>
+<text xml:space="preserve" text-anchor="middle" x="522.75" y="-153.7" font-family="Times,serif" font-size="14.00">(Serper, HuggingFace, Email)</text>
+</g>
+<!-- Agent&#45;&gt;ExternalServices -->
+<g id="edge3" class="edge">
+<title>Agent&#45;&gt;ExternalServices</title>
+<path fill="none" stroke="black" d="M522.75,-815.55C522.75,-725.19 522.75,-310.14 522.75,-196.71"/>
+<polygon fill="black" stroke="black" points="526.25,-196.78 522.75,-186.78 519.25,-196.78 526.25,-196.78"/>
+</g>
+<!-- MultiAgent -->
+<g id="node5" class="node">
+<title>MultiAgent</title>
+<polygon fill="lightblue" stroke="black" points="861.5,-185 658,-185 658,-149 861.5,-149 861.5,-185"/>
+<text xml:space="preserve" text-anchor="middle" x="759.75" y="-158.95" font-family="Times,serif" font-size="14.00">Multi&#45;Agent Orchestration</text>
+</g>
+<!-- Agent&#45;&gt;MultiAgent -->
+<g id="edge4" class="edge">
+<title>Agent&#45;&gt;MultiAgent</title>
+<path fill="none" stroke="black" d="M528.97,-815.55C561.24,-725 709.69,-308.45 749.76,-196.03"/>
+<polygon fill="black" stroke="black" points="753.03,-197.28 753.09,-186.69 746.44,-194.93 753.03,-197.28"/>
+</g>
+<!-- ActionFilters -->
+<g id="node6" class="node">
+<title>ActionFilters</title>
+<polygon fill="lightblue" stroke="black" points="1000.25,-185 879.25,-185 879.25,-149 1000.25,-149 1000.25,-185"/>
+<text xml:space="preserve" text-anchor="middle" x="939.75" y="-158.95" font-family="Times,serif" font-size="14.00">Action Filters</text>
+</g>
+<!-- Agent&#45;&gt;ActionFilters -->
+<g id="edge5" class="edge">
+<title>Agent&#45;&gt;ActionFilters</title>
+<path fill="none" stroke="black" d="M533.69,-815.55C590.64,-724.73 853.26,-305.92 922.81,-195.01"/>
+<polygon fill="black" stroke="black" points="925.77,-196.88 928.12,-186.54 919.84,-193.16 925.77,-196.88"/>
+</g>
+</g>
+</svg>

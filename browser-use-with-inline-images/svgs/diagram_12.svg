@@ -1,0 +1,98 @@
+<svg width="737pt" height="440pt"
+ viewBox="0.00 0.00 737.00 440.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+  * {
+    fill: transparent !important;
+    stroke: rgb(255, 255, 255) !important;
+    stroke-width: 1 !important;
+  }
+  polygon:not(.cluster *, .node *, .edge *, text) {
+    stroke: transparent !important;
+  }
+  text {
+    font-size: 10px !important;
+    font-family: monospace !important;
+    fill: rgb(255, 255, 255) !important;
+    stroke: transparent !important;
+    transform: translateY(-0.5em);
+  }
+</style>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 436)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-436 733.28,-436 733.28,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_auth</title>
+<polygon fill="none" stroke="black" points="8,-162.47 8,-269.53 212,-269.53 212,-162.47 8,-162.47"/>
+<text xml:space="preserve" text-anchor="middle" x="110" y="-252.23" font-family="Times,serif" font-size="14.00">Authentication</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_client</title>
+<polygon fill="none" stroke="black" points="194,-312.8 194,-419.85 376,-419.85 376,-312.8 194,-312.8"/>
+<text xml:space="preserve" text-anchor="middle" x="285" y="-402.55" font-family="Times,serif" font-size="14.00">Browser&#45;Use Client</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_cloud_service</title>
+<polygon fill="none" stroke="black" points="220,-162.47 220,-269.53 424,-269.53 424,-162.47 220,-162.47"/>
+<text xml:space="preserve" text-anchor="middle" x="322" y="-252.23" font-family="Times,serif" font-size="14.00">Cloud Browser Service API</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_data_models</title>
+<polygon fill="none" stroke="black" points="225,-12.15 225,-119.2 407,-119.2 407,-12.15 225,-12.15"/>
+<text xml:space="preserve" text-anchor="middle" x="316" y="-101.9" font-family="Times,serif" font-size="14.00">Data Models</text>
+</g>
+<!-- CloudBrowserClient -->
+<g id="node1" class="node">
+<title>CloudBrowserClient</title>
+<polygon fill="lightblue" stroke="black" points="368,-370.15 202,-370.15 202,-334.15 368,-334.15 368,-370.15"/>
+<text xml:space="preserve" text-anchor="middle" x="285" y="-349.35" font-family="Times,serif" font-size="14.00">CloudBrowserClient</text>
+<text xml:space="preserve" text-anchor="middle" x="285" y="-338.85" font-family="Times,serif" font-size="14.00">(Python Application)</text>
+</g>
+<!-- API_Token_Source -->
+<g id="node2" class="node">
+<title>API_Token_Source</title>
+<polygon fill="lightblue" stroke="black" points="204.25,-220.15 15.75,-220.15 15.75,-184.15 204.25,-184.15 204.25,-220.15"/>
+<text xml:space="preserve" text-anchor="middle" x="110" y="-199.35" font-family="Times,serif" font-size="14.00">API Key Source</text>
+<text xml:space="preserve" text-anchor="middle" x="110" y="-188.85" font-family="Times,serif" font-size="14.00">(Env Var / Config File)</text>
+</g>
+<!-- CloudBrowserClient&#45;&gt;API_Token_Source -->
+<g id="edge1" class="edge">
+<title>CloudBrowserClient&#45;&gt;API_Token_Source</title>
+<path fill="none" stroke="black" d="M234.63,-333.75C212.64,-324.45 187.58,-311.37 168.5,-294.4 148.57,-276.67 132.77,-250.6 122.65,-230.86"/>
+<polygon fill="black" stroke="black" points="125.84,-229.42 118.28,-221.99 119.56,-232.51 125.84,-229.42"/>
+<text xml:space="preserve" text-anchor="middle" x="224.75" y="-281.1" font-family="Times,serif" font-size="14.00">Obtains API Key</text>
+</g>
+<!-- CloudServiceAPI -->
+<g id="node3" class="node">
+<title>CloudServiceAPI</title>
+<polygon fill="lightblue" stroke="black" points="371.75,-220.15 228.25,-220.15 228.25,-184.15 371.75,-184.15 371.75,-220.15"/>
+<text xml:space="preserve" text-anchor="middle" x="300" y="-194.1" font-family="Times,serif" font-size="14.00">Cloud Service API</text>
+</g>
+<!-- CloudBrowserClient&#45;&gt;CloudServiceAPI -->
+<g id="edge2" class="edge">
+<title>CloudBrowserClient&#45;&gt;CloudServiceAPI</title>
+<path fill="none" stroke="black" d="M284.51,-333.69C284.31,-320.09 284.42,-300.76 286,-283.9 287.65,-266.29 291,-246.74 294.01,-231.29"/>
+<polygon fill="black" stroke="black" points="297.36,-232.35 295.91,-221.85 290.5,-230.96 297.36,-232.35"/>
+<text xml:space="preserve" text-anchor="middle" x="391" y="-281.1" font-family="Times,serif" font-size="14.00">create_browser, stop_browser</text>
+</g>
+<!-- RequestResponseModels -->
+<g id="node4" class="node">
+<title>RequestResponseModels</title>
+<polygon fill="lightblue" stroke="black" points="399,-69.15 233,-69.15 233,-33.15 399,-33.15 399,-69.15"/>
+<text xml:space="preserve" text-anchor="middle" x="316" y="-48.35" font-family="Times,serif" font-size="14.00">CreateBrowserRequest</text>
+<text xml:space="preserve" text-anchor="middle" x="316" y="-37.85" font-family="Times,serif" font-size="14.00">CloudBrowserResponse</text>
+</g>
+<!-- CloudBrowserClient&#45;&gt;RequestResponseModels -->
+<g id="edge3" class="edge">
+<title>CloudBrowserClient&#45;&gt;RequestResponseModels</title>
+<path fill="none" stroke="black" d="M368.29,-339.28C420.22,-329.98 480.1,-315.13 496,-294.4 539.4,-237.78 534.63,-193.87 496,-133.9 476.55,-103.7 442.91,-84.52 409.94,-72.41"/>
+<polygon fill="black" stroke="black" points="411.3,-69.18 400.71,-69.22 409.01,-75.8 411.3,-69.18"/>
+<text xml:space="preserve" text-anchor="middle" x="628.03" y="-194.1" font-family="Times,serif" font-size="14.00">Uses for requests/responses</text>
+</g>
+<!-- CloudServiceAPI&#45;&gt;RequestResponseModels -->
+<g id="edge4" class="edge">
+<title>CloudServiceAPI&#45;&gt;RequestResponseModels</title>
+<path fill="none" stroke="black" d="M299.47,-183.69C299.24,-170.08 299.34,-150.75 301,-133.9 302.76,-116.05 306.35,-96.25 309.57,-80.62"/>
+<polygon fill="black" stroke="black" points="312.95,-81.56 311.62,-71.05 306.1,-80.1 312.95,-81.56"/>
+<text xml:space="preserve" text-anchor="middle" x="398.5" y="-131.1" font-family="Times,serif" font-size="14.00">Handles requests/responses</text>
+</g>
+</g>
+</svg>
